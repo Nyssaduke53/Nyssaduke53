@@ -1,0 +1,7 @@
+- 👋 Hi, I’m @Nyssaduke53
+- 💸 I’m interested in learning how to code for a big paycheck
+- ☕️ I’m currently learning Java
+- 🐕 I’m looking to collaborate on fun and games 
+- 📫 don't talk to me
+- 🧍‍♀️ Pronouns: she/her
+- ⚡ Fun fact: I like my Thanksgiving food all mixed together on the plate(even the pie)
