@@ -1,0 +1,20 @@
+{
+    "Bodily Fluids": {
+      "Giving": [
+        { "name": "Watersports", "rating": null },
+        { "name": "Blindfolding", "rating": null }
+      ],
+      "Receiving": [],
+      "Neutral": [
+        { "name": "Cum", "rating": null }
+      ]
+    },
+    "Humiliation": {
+      "Giving": [],
+      "Receiving": [
+        { "name": "Teasing", "rating": null }
+      ],
+      "Neutral": []
+    }
+  }
+  

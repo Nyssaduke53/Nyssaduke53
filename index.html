@@ -41,20 +41,6 @@
     let currentAction = 'Giving';
     let currentCategory = null;
 
-    const blankTemplate = {
-  "Bodily Fluids": {
-    "Giving": [{ name: "Watersports", rating: null }, { name: "Cum", rating: null }],
-    "Receiving": [{ name: "Watersports", rating: null }, { name: "Cum", rating: null }],
-    "Neutral": []
-  },
-  "Humiliation": {
-    "Giving": [{ name: "Teasing", rating: null }],
-    "Receiving": [{ name: "Teasing", rating: null }],
-    "Neutral": []
-  }
-};
-
-
     document.getElementById('fileA').addEventListener('change', (e) => {
       const reader = new FileReader();
       reader.onload = (ev) => {
@@ -70,9 +56,18 @@
     });
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
-  surveyA = JSON.parse(JSON.stringify(blankTemplate)); // Deep copy
-  showCategories();
+  fetch('template-survey.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to load template file.');
+      return response.json();
+    })
+    .then(data => {
+      surveyA = data;
+      showCategories();
+    })
+    .catch(err => alert('Error loading template: ' + err.message));
 });
+
 
 
     document.getElementById('fileB').addEventListener('change', (e) => {
