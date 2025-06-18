@@ -2,7 +2,7 @@
     "Bodily Fluids": {
       "Giving": [
         { "name": "Watersports", "rating": null },
-        { "name": "Blindfolding", "rating": null }
+        { "name": "Spit", "rating": null }
       ],
       "Receiving": [],
       "Neutral": [
@@ -13,6 +13,13 @@
       "Giving": [],
       "Receiving": [
         { "name": "Teasing", "rating": null }
+      ],
+      "Neutral": []
+    },
+    "Bondage": {
+      "Giving": [{ "name": "Blindfolds", "rating": null }],
+      "Receiving": [
+        { "name": "Blindfolds", "rating": null }
       ],
       "Neutral": []
     }
