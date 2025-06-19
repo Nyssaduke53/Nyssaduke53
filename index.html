@@ -1,19 +1,4 @@
 
-
-Calm area
-
-Phrases 
-
-Favorite Books
-
-Snap activities
-
-phrase based learning
-
-
-SYNC-EDIT-SYNC
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +58,7 @@ SYNC-EDIT-SYNC
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
       //update template version
-      fetch('template-survey.json?v=7')
+      fetch('template-survey.json?v=8')
         .then(response => {
           if (!response.ok) throw new Error('Failed to load template file.');
           return response.json();
