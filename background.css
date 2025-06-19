@@ -1,0 +1,80 @@
+/* Root color variables */
+:root {
+  --bg-color: #000000;
+  --font-color: #ffffff;
+}
+
+/* Light/Dark theme classes */
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: 'Playpen Sans Hebrew', cursive;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode {
+  --bg-color: #ffffff;
+  --font-color: #000000;
+}
+
+.dark-mode {
+  --bg-color: #000000;
+  --font-color: #ffffff;
+}
+
+/* Headings */
+h1, h3 {
+  font-family: 'Playpen Sans Hebrew', cursive;
+  margin: 0.5em 0;
+}
+
+/* Form controls */
+input[type="file"],
+input[type="color"],
+select {
+  background-color: #111;
+  color: var(--font-color);
+  border: 1px solid #555;
+  padding: 4px;
+  margin: 6px 0;
+  font-family: 'Playpen Sans Hebrew', cursive;
+}
+
+/* Buttons */
+button {
+  background-color: #222;
+  color: var(--font-color);
+  border: 1px solid #444;
+  padding: 8px 12px;
+  margin: 4px;
+  cursor: pointer;
+  font-family: 'Playpen Sans Hebrew', cursive;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Layout spacing */
+div {
+  margin-bottom: 10px;
+}
+
+/* Progress bar container */
+#progressContainer {
+  width: 100%;
+  background-color: #222;
+  border: 1px solid #444;
+  margin: 16px 0;
+  height: 20px;
+  display: none;
+}
+
+#progressBar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+  transition: width 1s ease-in-out;
+}
