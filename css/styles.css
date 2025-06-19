@@ -43,6 +43,18 @@ body.dark-mode input[type="file"] {
   color: #000;
 }
 
+body.dark-mode .tab {
+  background-color: #222;
+  color: #f5f5f5;
+  border-color: #00bfff;
+}
+
+body.dark-mode .tab.active {
+  background-color: #121212;
+  border-bottom-color: #121212;
+}
+
+
 /* Blue Theme: Black background, Blue font */
 body.theme-blue {
   background-color: #000000;
@@ -54,6 +66,17 @@ body.theme-blue select,
 body.theme-blue input[type="file"] {
   background-color: #0055aa;
   color: #fff;
+}
+
+body.theme-blue .tab {
+  background-color: #0055aa;
+  color: #fff;
+  border-color: #00bfff;
+}
+
+body.theme-blue .tab.active {
+  background-color: #000000;
+  border-bottom-color: #000000;
 }
 
 /* Outer Wilds Theme */
@@ -69,6 +92,18 @@ body.theme-outer-wilds input[type="file"] {
   color: #ffde8d;
 }
 
+body.theme-outer-wilds .tab {
+  background-color: #3b3a5a;
+  color: #ffde8d;
+  border-color: #ffde8d;
+}
+
+body.theme-outer-wilds .tab.active {
+  background-color: #1e1e2e;
+  border-bottom-color: #1e1e2e;
+}
+
+
 /* Monster Prom Theme */
 body.theme-monster-prom {
   background-color: #400040;
@@ -80,6 +115,17 @@ body.theme-monster-prom select,
 body.theme-monster-prom input[type="file"] {
   background-color: #ff69b4;
   color: #400040;
+}
+
+body.theme-monster-prom .tab {
+  background-color: #ff69b4;
+  color: #400040;
+  border-color: #400040;
+}
+
+body.theme-monster-prom .tab.active {
+  background-color: #400040;
+  border-bottom-color: #400040;
 }
 
 /* Rainbow Theme */
@@ -99,6 +145,17 @@ body.theme-rainbow h1,
 body.theme-rainbow h3,
 body.theme-rainbow label {
   text-shadow: 1px 1px 2px #000;
+}
+
+body.theme-rainbow .tab {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  border-color: #000;
+}
+
+body.theme-rainbow .tab.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Compatibility result styling */
