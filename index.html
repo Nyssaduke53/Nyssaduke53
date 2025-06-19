@@ -3,62 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Kink Compatibility</title>
-
-  <!-- Load the Playpen Sans Hebrew font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew&display=swap" rel="stylesheet">
-
   <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: 'Playpen Sans Hebrew', cursive;
-      font-size: 16px;
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    button {
-      background-color: #222;
-      color: white;
-      border: 1px solid #444;
-      padding: 8px 12px;
-      margin: 4px;
-      cursor: pointer;
-      font-family: 'Playpen Sans Hebrew', cursive;
-    }
-
-    button:hover {
-      background-color: #444;
-    }
-
-    input[type="file"], select {
-      background-color: #111;
-      color: white;
-      border: 1px solid #555;
-      font-family: 'Playpen Sans Hebrew', cursive;
-    }
-
-    h1, h3 {
-      color: white;
-      font-family: 'Playpen Sans Hebrew', cursive;
-    }
-
-    div {
-      margin-bottom: 10px;
-    }
-
-    #progressContainer {
-      width: 100%;
-      background-color: #222;
-      border: 1px solid #444;
-      margin-bottom: 10px;
-    }
-
-    #progressBar {
-      height: 20px;
-      background-color: #4caf50;
-      transition: width 1s ease-in-out;
-    }
+    /* We'll add styles here later */
   </style>
 </head>
 <body>
@@ -68,10 +14,11 @@
     <button id="givingBtn">Giving</button>
     <button id="receivingBtn">Receiving</button>
     <button id="neutralBtn">Neutral</button>
-    <button id="downloadBtn">Download Updated Template</button>
+    <button id="downloadBtn">Download Updated Survey</button>
     <button id="newSurveyBtn">Start New Survey</button>
-  </div>
 
+  </div>
+  
   <div id="categoryContainer"></div>
   <div id="kinkList"></div>
 
@@ -82,12 +29,8 @@
   <input type="file" id="fileB" />
 
   <button id="compareBtn">Compare Compatibility</button>
+<div id="comparisonResult"></div>
 
-  <div id="progressContainer" style="display: none;">
-    <div id="progressBar"></div>
-  </div>
-
-  <div id="comparisonResult"></div>
 
   <script>
     const categoryContainer = document.getElementById('categoryContainer');
@@ -103,6 +46,7 @@
       reader.onload = (ev) => {
         try {
           surveyA = JSON.parse(ev.target.result);
+          console.log('Survey A loaded:', surveyA);
           showCategories();
         } catch {
           alert('Invalid JSON file for Survey A.');
@@ -130,6 +74,7 @@
       reader.onload = (ev) => {
         try {
           surveyB = JSON.parse(ev.target.result);
+          console.log('Survey B loaded:', surveyB);
         } catch {
           alert('Invalid JSON file for Survey B.');
         }
@@ -171,11 +116,13 @@
 
         const select = document.createElement('select');
 
+        // Add empty option
         const emptyOption = document.createElement('option');
         emptyOption.value = '';
         emptyOption.textContent = '—';
         select.appendChild(emptyOption);
 
+        // Add 1–6 options
         for (let i = 1; i <= 6; i++) {
           const option = document.createElement('option');
           option.value = i;
@@ -193,6 +140,7 @@
       });
     }
 
+    // Action buttons handlers
     document.getElementById('givingBtn').onclick = () => {
       currentAction = 'Giving';
       showCategories();
@@ -231,81 +179,85 @@
     };
 
     document.getElementById('compareBtn').onclick = () => {
-      const resultDiv = document.getElementById('comparisonResult');
-      const progressContainer = document.getElementById('progressContainer');
-      const progressBar = document.getElementById('progressBar');
+  const resultDiv = document.getElementById('comparisonResult');
+  resultDiv.innerHTML = '';
 
-      resultDiv.innerHTML = '';
-      progressContainer.style.display = 'block';
-      progressBar.style.width = '0%';
+  if (!surveyA || !surveyB) {
+    resultDiv.textContent = 'Please upload both surveys to compare.';
+    return;
+  }
 
-      if (!surveyA || !surveyB) {
-        resultDiv.textContent = 'Please upload both surveys to compare.';
-        progressContainer.style.display = 'none';
-        return;
-      }
+  const categories = Object.keys(surveyA);
+let totalScore = 0;
+let count = 0;
+let redFlags = [];
+let yellowFlags = [];
 
-      const categories = Object.keys(surveyA);
-      let totalScore = 0;
-      let count = 0;
-      let redFlags = [];
-      let yellowFlags = [];
+categories.forEach(category => {
+  if (!surveyB[category]) return;
 
-      categories.forEach(category => {
-        if (!surveyB[category]) return;
+  ['Giving', 'Receiving', 'Neutral'].forEach(action => {
+    const listA = surveyA[category][action] || [];
+    const listB = surveyB[category][
+      action === 'Giving' ? 'Receiving' :
+      action === 'Receiving' ? 'Giving' : 'Neutral'
+    ] || [];
 
-        ['Giving', 'Receiving', 'Neutral'].forEach(action => {
-          const listA = surveyA[category][action] || [];
-          const listB = surveyB[category][
-            action === 'Giving' ? 'Receiving' :
-            action === 'Receiving' ? 'Giving' : 'Neutral'
-          ] || [];
+    listA.forEach(itemA => {
+      const match = listB.find(itemB =>
+  itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase()
+);
 
-          listA.forEach(itemA => {
-            const match = listB.find(itemB => itemB.name === itemA.name);
-            if (match) {
-              const ratingA = Number(itemA.rating);
-              const ratingB = Number(match.rating);
+if (match) {
+  const ratingA = parseInt(itemA.rating);
+const ratingB = parseInt(match.rating);
 
-              if (!isNaN(ratingA) && !isNaN(ratingB)) {
-                const diff = Math.abs(ratingA - ratingB);
-                const score = 100 - diff * 20;
-                totalScore += score;
-                count++;
+if (Number.isInteger(ratingA) && Number.isInteger(ratingB)) {
+  const diff = Math.abs(ratingA - ratingB);
+  const score = Math.max(0, 100 - diff * 20);
+  totalScore += score;
+  count++;
 
-                if ((ratingA === 6 && ratingB === 1) || (ratingA === 1 && ratingB === 6)) {
-                  redFlags.push(itemA.name);
-                } else if (
-                  (ratingA === 6 && ratingB === 2) || (ratingA === 2 && ratingB === 6) ||
-                  (ratingA === 5 && ratingB === 1) || (ratingA === 1 && ratingB === 5)
-                ) {
-                  yellowFlags.push(itemA.name);
-                }
-              }
-            }
-          });
-        });
-      });
+  if ((ratingA === 6 && ratingB === 1) || (ratingA === 1 && ratingB === 6)) {
+    redFlags.push(itemA.name);
+  } else if (
+    (ratingA === 6 && ratingB === 2) || (ratingA === 2 && ratingB === 6) ||
+    (ratingA === 5 && ratingB === 1) || (ratingA === 1 && ratingB === 5)
+  ) {
+    yellowFlags.push(itemA.name);
+  }
+}
 
-      if (count === 0) {
-        resultDiv.textContent = 'No shared rated items to compare.';
-        progressContainer.style.display = 'none';
-        return;
-      }
+}
 
-      const avgScore = Math.round(totalScore / count);
-      progressBar.style.width = `${avgScore}%`;
+    });
+  });
+});
 
-      let output = `<h3>Compatibility Score: ${avgScore}%</h3>`;
-      if (redFlags.length) {
-        output += `<p>🚩 Red flags: ${[...new Set(redFlags)].join(', ')}</p>`;
-      }
-      if (yellowFlags.length) {
-        output += `<p>⚠️ Yellow flags: ${[...new Set(yellowFlags)].join(', ')}</p>`;
-      }
+if (count === 0) {
+  resultDiv.textContent = 'No shared rated items to compare.';
+  return;
+}
 
-      resultDiv.innerHTML = output;
-    };
+if (count === 0 || isNaN(totalScore)) {
+  resultDiv.innerHTML = `<h3>Compatibility Score: 0%</h3><p>No shared rated items to compare.</p>`;
+  return;
+}
+const avgScore = Math.round(totalScore / count);
+
+let output = `<h3>Compatibility Score: ${avgScore}%</h3>`;
+
+if (redFlags.length) {
+  output += `<p>🚩 Red flags: ${[...new Set(redFlags)].join(', ')}</p>`;
+}
+if (yellowFlags.length) {
+  output += `<p>⚠️ Yellow flags: ${[...new Set(yellowFlags)].join(', ')}</p>`;
+}
+
+resultDiv.innerHTML = output;
+
+};
+
   </script>
 </body>
 </html>
