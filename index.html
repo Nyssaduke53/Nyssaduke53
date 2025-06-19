@@ -244,6 +244,45 @@
       const avgScore = Math.round(totalScore / count);
       let output = `<h3>Compatibility Score: ${avgScore}%</h3>`;
 
+            // SIMILARITY SCORE
+      let similarityScore = 0;
+      let similarityCount = 0;
+
+      categories.forEach(category => {
+        if (!surveyB[category]) return;
+
+        ['Giving', 'Receiving', 'Neutral'].forEach(action => {
+          const listA = surveyA[category][action] || [];
+          const listB = surveyB[category][action] || [];
+
+          listA.forEach(itemA => {
+            const match = listB.find(itemB =>
+              itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase()
+            );
+
+            if (match) {
+              const ratingA = parseInt(itemA.rating);
+              const ratingB = parseInt(match.rating);
+
+              if (Number.isInteger(ratingA) && Number.isInteger(ratingB)) {
+                const diff = Math.abs(ratingA - ratingB);
+                const score = Math.max(0, 100 - diff * 20);
+                similarityScore += score;
+                similarityCount++;
+              }
+            }
+          });
+        });
+      });
+
+      if (similarityCount > 0 && !isNaN(similarityScore)) {
+        const avgSimScore = Math.round(similarityScore / similarityCount);
+        output += `<h4>Similarity Score: ${avgSimScore}%</h4>`;
+      } else {
+        output += `<h4>Similarity Score: 0%</h4><p>No overlapping ratings in matching roles.</p>`;
+      }
+
+
       if (redFlags.length) {
         output += `<p>🚩 Red flags: ${[...new Set(redFlags)].join(', ')}</p>`;
       }
