@@ -178,7 +178,7 @@ body.theme-rainbow {
   background: linear-gradient(270deg, rgb(246, 150, 150), rgb(243, 215, 163), rgb(237, 237, 143), rgb(146, 233, 146), rgb(155, 155, 236), rgb(211, 166, 243), rgb(242, 146, 242));
   background-size: 1400% 1400%;
   animation: rainbowFlow 30s ease infinite;
-  color: rgb(58, 36, 61);
+  color: rgb(102, 54, 85);
 }
 
 body.theme-rainbow button,
