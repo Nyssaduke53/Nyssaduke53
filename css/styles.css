@@ -175,8 +175,8 @@ body.theme-monster-prom #categoryContainer button.active {
 
 /* Rainbow Theme */
 body.theme-rainbow {
-  background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
-  color: white;
+  background: linear-gradient(135deg, rgb(246, 150, 150), rgb(243, 215, 163), rgb(237, 237, 143), rgb(146, 233, 146), rgb(155, 155, 236), rgb(211, 166, 243), rgb(242, 146, 242));
+  color: rgb(212, 226, 246);
 }
 
 body.theme-rainbow button,
