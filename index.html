@@ -57,7 +57,7 @@
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
       //update template version
-      fetch('template-survey.json?v=7')
+      fetch('template-survey.json?v=8')
         .then(response => {
           if (!response.ok) throw new Error('Failed to load template file.');
           return response.json();
@@ -261,3 +261,36 @@ resultDiv.innerHTML = output;
   </script>
 </body>
 </html>
+// Theme and color control
+const body = document.body;
+const bgColorPicker = document.getElementById('bgColorPicker');
+const fontColorPicker = document.getElementById('fontColorPicker');
+const resetBtn = document.getElementById('resetColors');
+const toggleThemeBtn = document.getElementById('toggleThemeButton');
+const progressContainer = document.getElementById('progressContainer');
+const progressBar = document.getElementById('progressBar');
+
+// Load saved settings
+window.addEventListener('load', () => {
+  const savedBg = localStorage.getItem('bgColor');
+  const savedFont = localStorage.getItem('fontColor');
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedBg) {
+    document.documentElement.style.setProperty('--bg-color', savedBg);
+    bgColorPicker.value = savedBg;
+  }
+  if (savedFont) {
+    document.documentElement.style.setProperty('--font-color', savedFont);
+    fontColorPicker.value = savedFont;
+  }
+  if (savedTheme) {
+    body.classList.remove('dark-mode', 'light-mode');
+    body.classList.add(savedTheme);
+  }
+});
+
+// Change background color
+bgColorPicker.addEventListener('input', () => {
+  const color = bgColorPicker.value;
+  document.documentElement.style.setProperty('--
