@@ -12,6 +12,13 @@ body {
   color: #f5f5f5;
 }
 
+.dark-mode button,
+.dark-mode select,
+.dark-mode input[type="file"] {
+  background-color: #00bfff;
+  color: #000;
+}
+
 /* Light Mode */
 .light-mode {
   background-color: #ffffff;
@@ -21,7 +28,7 @@ body {
 /* Black background + Blue font */
 .theme-blue {
   background-color: #000000;
-  color: #00bfff; /* DeepSkyBlue */
+  color: #00bfff;
 }
 
 /* Outer Wilds - space inspired theme */
@@ -52,7 +59,7 @@ body {
   text-shadow: 1px 1px 2px #000;
 }
 
-/* Form inputs and buttons */
+/* General styles for inputs and buttons */
 input[type="file"],
 button,
 select {
@@ -72,4 +79,13 @@ select:hover {
 
 /* Section headers */
 h1, h3 {
-  margin-botto
+  margin-bottom: 10px;
+}
+
+/* Compatibility result output */
+#comparisonResult {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
