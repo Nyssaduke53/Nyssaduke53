@@ -1,25 +1,113 @@
 {
-    "Bodily Fluids": {
+    "Bodily Fluids and Functions": {
       "Giving": [
         { "name": "Watersports", "rating": null },
         { "name": "Spit", "rating": null }
       ],
-      "Receiving": [],
+      "Receiving": [
+        { "name": "Watersports", "rating": null },
+        { "name": "Spit", "rating": null }
+      ],
       "Neutral": [
         { "name": "Cum", "rating": null }
       ]
     },
-    "Humiliation": {
-      "Giving": [],
+    "Body Part Torture": {
+      "Giving": [
+        { "name": "Nipple clips", "rating": null },
+        { "name": "Nipple weights", "rating": null },
+        { "name": "Nipple suction cups", "rating": null },
+        { "name": "Cock, Ball Torture (CBT)", "rating": null },
+        { "name": "Clit clips/weights/suction", "rating": null }
+      ],
       "Receiving": [
-        { "name": "Teasing", "rating": null }
+        { "name": "Nipple clips", "rating": null },
+        { "name": "Nipple weights", "rating": null },
+        { "name": "Nipple suction cups", "rating": null },
+        { "name": "Cock, Ball Torture (CBT)", "rating": null },
+        { "name": "Clit clips/weights/suction", "rating": null }
       ],
       "Neutral": []
     },
-    "Bondage": {
-      "Giving": [{ "name": "Blindfolds", "rating": null }],
+    "Bondage and Suspension": {
+      "Giving": [
+        { "name": "Blindfolds", "rating": null },
+        { "name": "Bondage (heavy)", "rating": null },
+        { "name": "Bondage (light)", "rating": null },
+        { "name": "Immobilisation", "rating": null },
+        { "name": "Bondage (multi-day)", "rating": null },
+        { "name": "Bondage (public, under clothing)", "rating": null },
+        { "name": "Leather restraints", "rating": null },
+        { "name": "Chains", "rating": null },
+        { "name": "Ropes", "rating": null },
+        { "name": "Intricate (Japanese) rope bondage", "rating": null },
+        { "name": "Rope body harness", "rating": null },
+        { "name": "Arm & leg sleeves (armbinders)", "rating": null },
+        { "name": "Harnesses (leather)", "rating": null },
+        { "name": "Harnesses (rope)", "rating": null },
+        { "name": "Cuffs (leather)", "rating": null },
+        { "name": "Cuffs (metal)", "rating": null },
+        { "name": "Manacles & Irons", "rating": null },
+        { "name": "Gags (cloth)", "rating": null },
+        { "name": "Gags (rubber)", "rating": null },
+        { "name": "Gags (tape)", "rating": null },
+        { "name": "Gags (phallic)", "rating": null },
+        { "name": "Gags (ring)", "rating": null },
+        { "name": "Gags (ball)", "rating": null },
+        { "name": "Mouth bits", "rating": null },
+        { "name": "Full head hoods", "rating": null },
+        { "name": "Mummification/saran wrapping", "rating": null },
+        { "name": "Straight jackets", "rating": null },
+        { "name": "Suspension (upright)", "rating": null },
+        { "name": "Suspension (horizontal)", "rating": null },
+        { "name": "Suspension (inverted)", "rating": null }
+      ],
       "Receiving": [
-        { "name": "Blindfolds", "rating": null }
+        { "name": "Blindfolds", "rating": null },
+        { "name": "Bondage (heavy)", "rating": null },
+        { "name": "Bondage (light)", "rating": null },
+        { "name": "Immobilisation", "rating": null },
+        { "name": "Bondage (multi-day)", "rating": null },
+        { "name": "Bondage (public, under clothing)", "rating": null },
+        { "name": "Leather restraints", "rating": null },
+        { "name": "Chains", "rating": null },
+        { "name": "Ropes", "rating": null },
+        { "name": "Intricate (Japanese) rope bondage", "rating": null },
+        { "name": "Rope body harness", "rating": null },
+        { "name": "Arm & leg sleeves (armbinders)", "rating": null },
+        { "name": "Harnesses (leather)", "rating": null },
+        { "name": "Harnesses (rope)", "rating": null },
+        { "name": "Cuffs (leather)", "rating": null },
+        { "name": "Cuffs (metal)", "rating": null },
+        { "name": "Manacles & Irons", "rating": null },
+        { "name": "Gags (cloth)", "rating": null },
+        { "name": "Gags (rubber)", "rating": null },
+        { "name": "Gags (tape)", "rating": null },
+        { "name": "Gags (phallic)", "rating": null },
+        { "name": "Gags (ring)", "rating": null },
+        { "name": "Gags (ball)", "rating": null },
+        { "name": "Mouth bits", "rating": null },
+        { "name": "Full head hoods", "rating": null },
+        { "name": "Mummification/saran wrapping", "rating": null },
+        { "name": "Straight jackets", "rating": null },
+        { "name": "Suspension (upright)", "rating": null },
+        { "name": "Suspension (horizontal)", "rating": null },
+        { "name": "Suspension (inverted)", "rating": null }
+      ],
+      "Neutral": []
+    },
+    "Breath Play": {
+      "Giving": [
+        { "name": "Asphyxiation", "rating": null },
+        { "name": "Breath control", "rating": null },
+        { "name": "Choking", "rating": null },
+        { "name": "Drowning", "rating": null }
+      ],
+      "Receiving": [
+        { "name": "Asphyxiation", "rating": null },
+        { "name": "Breath control", "rating": null },
+        { "name": "Choking", "rating": null },
+        { "name": "Drowning", "rating": null }
       ],
       "Neutral": []
     }
