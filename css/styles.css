@@ -1,110 +1,48 @@
-/* Base styles for all themes */
+/* Base Styles (applies to all themes by default) */
 body {
-  font-family: sans-serif;
-  margin: 20px;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
 
-button,
-select,
-input[type="file"] {
-  margin: 5px;
-  padding: 8px 12px;
+button, select, input[type="file"] {
+  padding: 8px 14px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
+  margin: 4px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Default Theme (Light) */
-body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
+h1, h3 {
+  margin: 1rem 0 0.5rem;
 }
 
-body.light-mode button,
-body.light-mode select,
-body.light-mode input[type="file"] {
-  background-color: #e0e0e0;
-  color: #000;
+#comparisonResult {
+  margin-top: 20px;
+  padding: 1em;
+  border-radius: 8px;
 }
 
-/* Dark Mode with Blue Buttons */
+/* === Dark Mode === */
 body.dark-mode {
   background-color: #121212;
-  color: #f5f5f5;
+  color: #e0e0e0;
 }
 
-body.dark-mode button,
-body.dark-mode select,
-body.dark-mode input[type="file"] {
-  background-color: #00bfff; /* Blue */
-  color: #000;
-}
-
-/* Blue Theme: Black background, Blue font */
-body.theme-blue {
-  background-color: #000000;
-  color: #00bfff;
-}
-
-body.theme-blue button,
-body.theme-blue select,
-body.theme-blue input[type="file"] {
-  background-color: #0055aa;
-  color: #fff;
-}
-
-/* Outer Wilds Theme */
-body.theme-outer-wilds {
-  background-color: #1e1e2e;
-  color: #ffde8d;
-}
-
-body.theme-outer-wilds button,
-body.theme-outer-wilds select,
-body.theme-outer-wilds input[type="file"] {
-  background-color: #3b3a5a;
-  color: #ffde8d;
-}
-
-/* Monster Prom Theme */
-body.theme-monster-prom {
-  background-color: #400040;
-  color: #ff69b4;
-}
-
-body.theme-monster-prom button,
-body.theme-monster-prom select,
-body.theme-monster-prom input[type="file"] {
-  background-color: #ff69b4;
-  color: #400040;
-}
-
-/* Rainbow Theme */
-body.theme-rainbow {
-  background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+.dark-mode button,
+.dark-mode select {
+  background-color: #1e88e5; /* Blue buttons */
   color: white;
 }
 
-body.theme-rainbow button,
-body.theme-rainbow select,
-body.theme-rainbow input[type="file"] {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #000;
+.dark-mode input[type="file"] {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
 }
 
-body.theme-rainbow h1,
-body.theme-rainbow h3,
-body.theme-rainbow label {
-  text-shadow: 1px 1px 2px #000;
-}
+/* === Light Mode === */
+body.light-mode {
+  ba
 
-/* Compatibility result styling */
-#comparisonResult {
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-}
