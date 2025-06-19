@@ -175,7 +175,9 @@ body.theme-monster-prom #categoryContainer button.active {
 
 /* Rainbow Theme */
 body.theme-rainbow {
-  background: linear-gradient(135deg, rgb(246, 150, 150), rgb(243, 215, 163), rgb(237, 237, 143), rgb(146, 233, 146), rgb(155, 155, 236), rgb(211, 166, 243), rgb(242, 146, 242));
+  background: linear-gradient(270deg, rgb(246, 150, 150), rgb(243, 215, 163), rgb(237, 237, 143), rgb(146, 233, 146), rgb(155, 155, 236), rgb(211, 166, 243), rgb(242, 146, 242));
+  background-size: 1400% 1400%;
+  animation: rainbowFlow 30s ease infinite;
   color: rgb(212, 226, 246);
 }
 
@@ -209,6 +211,30 @@ body.theme-rainbow #categoryContainer button.active {
   font-weight: bold;
   border: 1px solid #000;
   cursor: default;
+}
+
+body.theme-rainbow .tab,
+body.theme-rainbow button,
+body.theme-rainbow select {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  border: 1px solid white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.theme-rainbow .tab.active,
+body.theme-rainbow button:hover,
+body.theme-rainbow .tab:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: scale(1.03);
+}
+
+
+@keyframes rainbowFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 
