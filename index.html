@@ -103,26 +103,22 @@ function showCategories() {
     const btn = document.createElement('button');
     btn.textContent = cat;
 
-    btn.onclick = () => {
-      // Remove 'active' from all buttons
-      [...categoryContainer.children].forEach(b => b.classList.remove('active'));
-
-      // Add 'active' to the clicked button
+    if (currentCategory === cat) {
       btn.classList.add('active');
-
-      showKinks(cat);
-    };
-
-    // Optionally: mark the first category active automatically
-    if (currentCategory === cat || (!currentCategory && categories.indexOf(cat) === 0)) {
-      btn.classList.add('active');
-      currentCategory = cat;
-      showKinks(cat);
     }
+
+    btn.onclick = () => {
+      if (currentCategory === cat) return; // already selected, no action
+
+      currentCategory = cat;
+      showCategories();  // redraw buttons with correct active class
+      showKinks(cat);    // show kinks for new category
+    };
 
     categoryContainer.appendChild(btn);
   });
 }
+
 
 
     function showKinks(category) {
