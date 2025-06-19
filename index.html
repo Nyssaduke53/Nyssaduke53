@@ -207,7 +207,10 @@ categories.forEach(category => {
     ] || [];
 
     listA.forEach(itemA => {
-      const match = listB.find(itemB => itemB.name === itemA.name);
+      const match = listB.find(itemB =>
+  itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase()
+);
+
 if (match) {
   const ratingA = Number(itemA.rating);
   const ratingB = Number(match.rating);
@@ -238,6 +241,11 @@ if (match) {
 
 if (count === 0) {
   resultDiv.textContent = 'No shared rated items to compare.';
+  return;
+}
+
+if (count === 0 || isNaN(totalScore)) {
+  resultDiv.innerHTML = '<h3>Compatibility Score: 0%</h3><p>No rated matches found to compare.</p>';
   return;
 }
 
