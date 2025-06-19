@@ -108,3 +108,32 @@ body.theme-rainbow label {
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Tab styling */
+.tab-container {
+  display: flex;
+  margin: 10px 0 20px 0;
+  border-bottom: 2px solid currentColor;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin-right: 4px;
+  border: 1px solid transparent;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: rgba(200, 200, 200, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s, font-weight 0.3s;
+}
+
+.tab:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.tab.active {
+  background-color: transparent;
+  font-weight: bold;
+  border: 1px solid currentColor;
+  border-bottom: 2px solid transparent;
+}
