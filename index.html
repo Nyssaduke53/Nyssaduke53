@@ -57,7 +57,7 @@
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
       //update template version
-      fetch('template-survey.json?v=5')
+      fetch('template-survey.json?v=3')
 
     .then(response => {
       if (!response.ok) throw new Error('Failed to load template file.');
@@ -228,19 +228,6 @@ if (Number.isInteger(ratingA) && Number.isInteger(ratingB)) {
   }
 }
 
-
-    // Red flags
-    if ((ratingA === 6 && ratingB === 1) || (ratingA === 1 && ratingB === 6)) {
-      redFlags.push(itemA.name);
-    }
-    // Yellow flags
-    else if (
-      (ratingA === 6 && ratingB === 2) || (ratingA === 2 && ratingB === 6) ||
-      (ratingA === 5 && ratingB === 1) || (ratingA === 1 && ratingB === 5)
-    ) {
-      yellowFlags.push(itemA.name);
-    }
-  }
 }
 
     });
