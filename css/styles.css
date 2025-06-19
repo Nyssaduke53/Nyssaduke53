@@ -30,6 +30,15 @@ body.light-mode input[type="file"] {
   color: #000;
 }
 
+body.light-mode #categoryContainer button.active {
+  background-color: #007acc;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #005fa3;
+  cursor: default;
+}
+
+
 /* Dark Mode with Blue Buttons */
 body.dark-mode {
   background-color: #121212;
@@ -54,6 +63,15 @@ body.dark-mode .tab.active {
   border-bottom-color: #121212;
 }
 
+body.dark-mode #categoryContainer button.active {
+  background-color: #00bfff;
+  color: #000;
+  font-weight: bold;
+  border: 1px solid #0099cc;
+  cursor: default;
+}
+
+
 
 /* Blue Theme: Black background, Blue font */
 body.theme-blue {
@@ -67,6 +85,15 @@ body.theme-blue input[type="file"] {
   background-color: #0055aa;
   color: #fff;
 }
+
+body.theme-blue #categoryContainer button.active {
+  background-color: #0055aa;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #003377;
+  cursor: default;
+}
+
 
 body.theme-blue .tab {
   background-color: #0055aa;
@@ -103,6 +130,15 @@ body.theme-outer-wilds .tab.active {
   border-bottom-color: #1e1e2e;
 }
 
+body.theme-outer-wilds #categoryContainer button.active {
+  background-color: #3b3a5a;
+  color: #ffde8d;
+  font-weight: bold;
+  border: 1px solid #ffde8d;
+  cursor: default;
+}
+
+
 
 /* Monster Prom Theme */
 body.theme-monster-prom {
@@ -127,6 +163,15 @@ body.theme-monster-prom .tab.active {
   background-color: #400040;
   border-bottom-color: #400040;
 }
+
+body.theme-monster-prom #categoryContainer button.active {
+  background-color: #ff69b4;
+  color: #400040;
+  font-weight: bold;
+  border: 1px solid #800080;
+  cursor: default;
+}
+
 
 /* Rainbow Theme */
 body.theme-rainbow {
@@ -157,6 +202,15 @@ body.theme-rainbow .tab.active {
   background-color: rgba(255, 255, 255, 0.9);
   border-bottom-color: rgba(255, 255, 255, 0.9);
 }
+
+body.theme-rainbow #categoryContainer button.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-weight: bold;
+  border: 1px solid #000;
+  cursor: default;
+}
+
 
 /* Compatibility result styling */
 #comparisonResult {
@@ -195,13 +249,5 @@ body.theme-rainbow .tab.active {
   background-color: #fff;
   font-weight: bold;
   border-bottom: 2px solid #fff;
+  cursor: default;
 }
-
-#categoryContainer button.active {
-  background-color: #007acc;  /* Or pick a color that fits your theme */
-  color: white;
-  font-weight: bold;
-  border: 1px solid #005fa3;
-  cursor: default; /* Optional: indicate it's selected */
-}
-
