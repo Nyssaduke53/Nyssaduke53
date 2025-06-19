@@ -1,91 +1,110 @@
-/* Default body style */
+/* Base styles for all themes */
 body {
-  background-color: #ffffff;
-  color: #000000;
   font-family: sans-serif;
   margin: 20px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode */
-.dark-mode {
+button,
+select,
+input[type="file"] {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+/* Default Theme (Light) */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode button,
+body.light-mode select,
+body.light-mode input[type="file"] {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Dark Mode with Blue Buttons */
+body.dark-mode {
   background-color: #121212;
   color: #f5f5f5;
 }
 
-.dark-mode button,
-.dark-mode select,
-.dark-mode input[type="file"] {
-  background-color: #00bfff;
+body.dark-mode button,
+body.dark-mode select,
+body.dark-mode input[type="file"] {
+  background-color: #00bfff; /* Blue */
   color: #000;
 }
 
-/* Light Mode */
-.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* Black background + Blue font */
-.theme-blue {
+/* Blue Theme: Black background, Blue font */
+body.theme-blue {
   background-color: #000000;
   color: #00bfff;
 }
 
-/* Outer Wilds - space inspired theme */
-.theme-outer-wilds {
+body.theme-blue button,
+body.theme-blue select,
+body.theme-blue input[type="file"] {
+  background-color: #0055aa;
+  color: #fff;
+}
+
+/* Outer Wilds Theme */
+body.theme-outer-wilds {
   background-color: #1e1e2e;
   color: #ffde8d;
 }
 
-/* Monster Prom 4 - vibrant and fun */
-.theme-monster-prom {
+body.theme-outer-wilds button,
+body.theme-outer-wilds select,
+body.theme-outer-wilds input[type="file"] {
+  background-color: #3b3a5a;
+  color: #ffde8d;
+}
+
+/* Monster Prom Theme */
+body.theme-monster-prom {
   background-color: #400040;
   color: #ff69b4;
 }
 
-/* Rainbow Theme - Pride & Colorful */
-.theme-rainbow {
+body.theme-monster-prom button,
+body.theme-monster-prom select,
+body.theme-monster-prom input[type="file"] {
+  background-color: #ff69b4;
+  color: #400040;
+}
+
+/* Rainbow Theme */
+body.theme-rainbow {
   background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
   color: white;
 }
 
-/* Rainbow-specific adjustments for readability */
-.theme-rainbow h1,
-.theme-rainbow h3,
-.theme-rainbow label,
-.theme-rainbow button,
-.theme-rainbow select {
-  color: white;
+body.theme-rainbow button,
+body.theme-rainbow select,
+body.theme-rainbow input[type="file"] {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+
+body.theme-rainbow h1,
+body.theme-rainbow h3,
+body.theme-rainbow label {
   text-shadow: 1px 1px 2px #000;
 }
 
-/* General styles for inputs and buttons */
-input[type="file"],
-button,
-select {
-  margin: 5px;
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: none;
-  font-size: 1rem;
-}
-
-/* Button hover effect */
-button:hover,
-select:hover {
-  opacity: 0.9;
-  cursor: pointer;
-}
-
-/* Section headers */
-h1, h3 {
-  margin-bottom: 10px;
-}
-
-/* Compatibility result output */
+/* Compatibility result styling */
 #comparisonResult {
   margin-top: 20px;
   padding: 10px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
 }
