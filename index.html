@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Kink Compatibility</title>
   <link rel="stylesheet" href="css/styles.css">
-  
+
 
 </head>
 <body>
@@ -94,18 +94,36 @@
       reader.readAsText(e.target.files[0]);
     });
 
-    function showCategories() {
-      categoryContainer.innerHTML = '';
-      if (!surveyA) return;
+function showCategories() {
+  categoryContainer.innerHTML = '';
+  if (!surveyA) return;
 
-      const categories = Object.keys(surveyA);
-      categories.forEach(cat => {
-        const btn = document.createElement('button');
-        btn.textContent = cat;
-        btn.onclick = () => showKinks(cat);
-        categoryContainer.appendChild(btn);
-      });
+  const categories = Object.keys(surveyA);
+  categories.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.textContent = cat;
+
+    btn.onclick = () => {
+      // Remove 'active' from all buttons
+      [...categoryContainer.children].forEach(b => b.classList.remove('active'));
+
+      // Add 'active' to the clicked button
+      btn.classList.add('active');
+
+      showKinks(cat);
+    };
+
+    // Optionally: mark the first category active automatically
+    if (currentCategory === cat || (!currentCategory && categories.indexOf(cat) === 0)) {
+      btn.classList.add('active');
+      currentCategory = cat;
+      showKinks(cat);
     }
+
+    categoryContainer.appendChild(btn);
+  });
+}
+
 
     function showKinks(category) {
       currentCategory = category;

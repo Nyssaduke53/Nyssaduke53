@@ -196,3 +196,10 @@ body.theme-rainbow .tab.active {
   font-weight: bold;
   border-bottom: 2px solid #fff;
 }
+
+#categoryContainer button.active {
+  background-color: #007bff;  /* or your theme’s highlight color */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+}
