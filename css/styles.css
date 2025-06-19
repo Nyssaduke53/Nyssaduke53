@@ -110,32 +110,32 @@ body.theme-rainbow label {
 }
 
 /* Tab styling */
+
 .tab-container {
   display: flex;
   margin: 10px 0 20px 0;
-  border-bottom: 2px solid currentColor;
+  border-bottom: 2px solid #666;
 }
 
 .tab {
   display: inline-block;
   padding: 10px 20px;
   margin-right: 4px;
-  border: 1px solid transparent;
+  border: 1px solid #666;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  background-color: rgba(200, 200, 200, 0.2);
+  background-color: #ddd;
+  color: #000;
   cursor: pointer;
   transition: background-color 0.3s, font-weight 0.3s;
-  
 }
 
 .tab:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #eee;
 }
 
 .tab.active {
-  background-color: transparent;
+  background-color: #fff;
   font-weight: bold;
-  border: 1px solid currentColor;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid #fff;
 }
