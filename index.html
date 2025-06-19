@@ -209,14 +209,25 @@ categories.forEach(category => {
     listA.forEach(itemA => {
       const match = listB.find(itemB => itemB.name === itemA.name);
 if (match) {
-  const ratingA = Number(itemA.rating);
-  const ratingB = Number(match.rating);
+  const ratingA = parseInt(itemA.rating);
+const ratingB = parseInt(match.rating);
 
-  if (!isNaN(ratingA) && !isNaN(ratingB)) {
-    const diff = Math.abs(ratingA - ratingB);
-    const score = 100 - diff * 20;
-    totalScore += score;
-    count++;
+if (Number.isInteger(ratingA) && Number.isInteger(ratingB)) {
+  const diff = Math.abs(ratingA - ratingB);
+  const score = Math.max(0, 100 - diff * 20);
+  totalScore += score;
+  count++;
+
+  if ((ratingA === 6 && ratingB === 1) || (ratingA === 1 && ratingB === 6)) {
+    redFlags.push(itemA.name);
+  } else if (
+    (ratingA === 6 && ratingB === 2) || (ratingA === 2 && ratingB === 6) ||
+    (ratingA === 5 && ratingB === 1) || (ratingA === 1 && ratingB === 5)
+  ) {
+    yellowFlags.push(itemA.name);
+  }
+}
+
 
     // Red flags
     if ((ratingA === 6 && ratingB === 1) || (ratingA === 1 && ratingB === 6)) {
