@@ -9,17 +9,20 @@ body {
 #outerWildsBanner {
   display: none;
   width: 100%;
-  height: 250px;
+  height: 300px;
   background: url('https://media.tenor.com/6jFqpR7JWg0AAAAM/outer-wilds-space.gif') center center no-repeat;
   background-size: cover;
+  background-attachment: scroll;
   opacity: 0.9;
   margin-bottom: 20px;
-  border-radius: 0 0 12px 12px;
+  border-bottom: 4px solid #ffde8d;
 }
 
-/* Show only when Outer Wilds theme is active */
+/* Show banner only in Outer Wilds theme */
 body.theme-outer-wilds #outerWildsBanner {
   display: block;
+}
+
 }
 
 }
