@@ -10,7 +10,8 @@
 <body>
 
   <body>
-  <div id="outerWildsBanner"></div>
+<img class="outerwilds-banner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Outer Wilds Banner">
+
 
 
   <h1>Kink Compatibility Survey</h1>
@@ -78,7 +79,7 @@
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
       //update template version
-      fetch('template-survey.json?v=26')
+      fetch('template-survey.json?v=27')
         .then(response => {
           if (!response.ok) throw new Error('Failed to load template file.');
           return response.json();
