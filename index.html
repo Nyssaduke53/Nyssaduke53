@@ -71,7 +71,7 @@
     });
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
-      fetch('template-survey.json?v=43')
+      fetch('template-survey.json?v=44')
         .then(response => {
           if (!response.ok) throw new Error('Failed to load template file.');
           return response.json();
