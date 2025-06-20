@@ -17,6 +17,13 @@ input[type="file"] {
   cursor: pointer;
 }
 
+.banner-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
 /* Default Theme (Light) */
 body.light-mode {
   background-color: #ffffff;
@@ -51,17 +58,6 @@ body.dark-mode input[type="file"] {
   color: #000;
 }
 
-body.dark-mode .tab {
-  background-color: #222;
-  color: #f5f5f5;
-  border-color: #00bfff;
-}
-
-body.dark-mode .tab.active {
-  background-color: #121212;
-  border-bottom-color: #121212;
-}
-
 body.dark-mode #categoryContainer button.active {
   background-color: #00bfff;
   color: #000;
@@ -70,7 +66,7 @@ body.dark-mode #categoryContainer button.active {
   cursor: default;
 }
 
-/* Blue Theme: Black background, Blue font */
+/* Blue Theme */
 body.theme-blue {
   background-color: #000000;
   color: #00bfff;
@@ -91,17 +87,6 @@ body.theme-blue #categoryContainer button.active {
   cursor: default;
 }
 
-body.theme-blue .tab {
-  background-color: #0055aa;
-  color: #fff;
-  border-color: #00bfff;
-}
-
-body.theme-blue .tab.active {
-  background-color: #000000;
-  border-bottom-color: #000000;
-}
-
 /* Outer Wilds Theme */
 body.theme-outer-wilds {
   background-color: #1e1e2e;
@@ -115,46 +100,12 @@ body.theme-outer-wilds input[type="file"] {
   color: #ffde8d;
 }
 
-body.theme-outer-wilds .tab {
-  background-color: #3b3a5a;
-  color: #ffde8d;
-  border-color: #ffde8d;
-}
-
-body.theme-outer-wilds .tab.active {
-  background-color: #1e1e2e;
-  border-bottom-color: #1e1e2e;
-}
-
 body.theme-outer-wilds #categoryContainer button.active {
   background-color: #3b3a5a;
   color: #ffde8d;
   font-weight: bold;
   border: 1px solid #ffde8d;
   cursor: default;
-}
-
-body.theme-outer-wilds .outerwilds-banner {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.monsterprom-banner {
-  display: none;
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  border-bottom: 4px solid #ff69b4;
-}
-
-/* Show only in Monster Prom 4 theme */
-body.theme-monster-prom .monsterprom-banner {
-  display: block;
 }
 
 /* Monster Prom Theme */
@@ -168,17 +119,6 @@ body.theme-monster-prom select,
 body.theme-monster-prom input[type="file"] {
   background-color: #ff69b4;
   color: #400040;
-}
-
-body.theme-monster-prom .tab {
-  background-color: #ff69b4;
-  color: #400040;
-  border-color: #400040;
-}
-
-body.theme-monster-prom .tab.active {
-  background-color: #400040;
-  border-bottom-color: #400040;
 }
 
 body.theme-monster-prom #categoryContainer button.active {
@@ -210,17 +150,6 @@ body.theme-rainbow label {
   text-shadow: 1px 1px 2px #000;
 }
 
-body.theme-rainbow .tab {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #000;
-  border-color: #000;
-}
-
-body.theme-rainbow .tab.active {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-bottom-color: rgba(255, 255, 255, 0.9);
-}
-
 body.theme-rainbow #categoryContainer button.active {
   background-color: rgba(255, 255, 255, 0.9);
   color: #000;
@@ -229,64 +158,8 @@ body.theme-rainbow #categoryContainer button.active {
   cursor: default;
 }
 
-body.theme-rainbow .tab,
-body.theme-rainbow button,
-body.theme-rainbow select {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #000;
-  border: 1px solid white;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-body.theme-rainbow .tab.active,
-body.theme-rainbow button:hover,
-body.theme-rainbow .tab:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-  transform: scale(1.03);
-}
-
 @keyframes rainbowFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-/* Compatibility result styling */
-#comparisonResult {
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Tab styling */
-.tab-container {
-  display: flex;
-  margin: 10px 0 20px 0;
-  border-bottom: 2px solid #666;
-}
-
-.tab {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 4px;
-  border: 1px solid #666;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  background-color: #ddd;
-  color: #000;
-  cursor: pointer;
-  transition: background-color 0.3s, font-weight 0.3s;
-}
-
-.tab:hover {
-  background-color: #eee;
-}
-
-.tab.active {
-  background-color: #fff;
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
-  cursor: default;
 }
