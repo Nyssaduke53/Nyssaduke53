@@ -5,16 +5,20 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Outer Wilds animated hero background */
-#outerWildsHero {
+/* Outer Wilds background image */
+#outerWildsBackground {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   z-index: -1;
-  display: none; /* hidden by default unless Outer Wilds theme is active */
+  background: url('https://media.tenor.com/6jFqpR7JWg0AAAAM/outer-wilds-space.gif') center center no-repeat;
+  background-size: cover;
+  opacity: 0.3; /* Makes it semi-transparent */
+  pointer-events: none; /* Allows clicking through the image */
+}
+
 }
 
 #outerWildsHero img {
