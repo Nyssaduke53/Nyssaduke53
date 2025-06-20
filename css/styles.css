@@ -1,4 +1,4 @@
-/* ========== Base Styles ========== */
+/* Base styles for all themes */
 body {
   font-family: sans-serif;
   margin: 20px;
@@ -17,27 +17,23 @@ input[type="file"] {
   cursor: pointer;
 }
 
-/* ========== Banner Images ========== */
-.banner-img {
-  width: 100%;
-  height: auto;
-  max-height: 250px;
-  object-fit: cover;
-  display: none;
-  border-radius: 10px;
+#themeControl {
   margin-bottom: 20px;
 }
 
-/* Show banner based on theme */
-body.theme-outer-wilds .outerwilds-banner {
-  display: block;
+/* Shared banner styling (hidden by default) */
+.theme-banner {
+  display: none;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-body.theme-monster-prom .monsterprom-banner {
-  display: block;
-}
-
-/* ========== Light Theme ========== */
+/* Light Theme */
 body.light-mode {
   background-color: #ffffff;
   color: #000000;
@@ -58,7 +54,7 @@ body.light-mode #categoryContainer button.active {
   cursor: default;
 }
 
-/* ========== Dark Theme with Blue Buttons ========== */
+/* Dark Theme - Blue buttons */
 body.dark-mode {
   background-color: #121212;
   color: #f5f5f5;
@@ -71,17 +67,6 @@ body.dark-mode input[type="file"] {
   color: #000;
 }
 
-body.dark-mode .tab {
-  background-color: #222;
-  color: #f5f5f5;
-  border-color: #00bfff;
-}
-
-body.dark-mode .tab.active {
-  background-color: #121212;
-  border-bottom-color: #121212;
-}
-
 body.dark-mode #categoryContainer button.active {
   background-color: #00bfff;
   color: #000;
@@ -90,7 +75,7 @@ body.dark-mode #categoryContainer button.active {
   cursor: default;
 }
 
-/* ========== Blue Theme ========== */
+/* Blue Theme */
 body.theme-blue {
   background-color: #000000;
   color: #00bfff;
@@ -111,18 +96,7 @@ body.theme-blue #categoryContainer button.active {
   cursor: default;
 }
 
-body.theme-blue .tab {
-  background-color: #0055aa;
-  color: #fff;
-  border-color: #00bfff;
-}
-
-body.theme-blue .tab.active {
-  background-color: #000000;
-  border-bottom-color: #000000;
-}
-
-/* ========== Outer Wilds Theme ========== */
+/* Outer Wilds Theme */
 body.theme-outer-wilds {
   background-color: #1e1e2e;
   color: #ffde8d;
@@ -135,17 +109,6 @@ body.theme-outer-wilds input[type="file"] {
   color: #ffde8d;
 }
 
-body.theme-outer-wilds .tab {
-  background-color: #3b3a5a;
-  color: #ffde8d;
-  border-color: #ffde8d;
-}
-
-body.theme-outer-wilds .tab.active {
-  background-color: #1e1e2e;
-  border-bottom-color: #1e1e2e;
-}
-
 body.theme-outer-wilds #categoryContainer button.active {
   background-color: #3b3a5a;
   color: #ffde8d;
@@ -154,7 +117,11 @@ body.theme-outer-wilds #categoryContainer button.active {
   cursor: default;
 }
 
-/* ========== Monster Prom Theme ========== */
+body.theme-outer-wilds #outerWildsBanner {
+  display: block;
+}
+
+/* Monster Prom Theme */
 body.theme-monster-prom {
   background-color: #400040;
   color: #ff69b4;
@@ -167,17 +134,6 @@ body.theme-monster-prom input[type="file"] {
   color: #400040;
 }
 
-body.theme-monster-prom .tab {
-  background-color: #ff69b4;
-  color: #400040;
-  border-color: #400040;
-}
-
-body.theme-monster-prom .tab.active {
-  background-color: #400040;
-  border-bottom-color: #400040;
-}
-
 body.theme-monster-prom #categoryContainer button.active {
   background-color: #ff69b4;
   color: #400040;
@@ -186,18 +142,13 @@ body.theme-monster-prom #categoryContainer button.active {
   cursor: default;
 }
 
-/* ========== Rainbow Theme ========== */
+body.theme-monster-prom #monsterPromBanner {
+  display: block;
+}
+
+/* Rainbow Theme */
 body.theme-rainbow {
-  background: linear-gradient(
-    270deg,
-    rgb(246, 150, 150),
-    rgb(243, 215, 163),
-    rgb(237, 237, 143),
-    rgb(146, 233, 146),
-    rgb(155, 155, 236),
-    rgb(211, 166, 243),
-    rgb(242, 146, 242)
-  );
+  background: linear-gradient(270deg, rgb(246, 150, 150), rgb(243, 215, 163), rgb(237, 237, 143), rgb(146, 233, 146), rgb(155, 155, 236), rgb(211, 166, 243), rgb(242, 146, 242));
   background-size: 1400% 1400%;
   animation: rainbowFlow 30s ease infinite;
   color: rgb(102, 54, 85);
@@ -216,17 +167,6 @@ body.theme-rainbow label {
   text-shadow: 1px 1px 2px #000;
 }
 
-body.theme-rainbow .tab {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #000;
-  border-color: #000;
-}
-
-body.theme-rainbow .tab.active {
-  background-color: rgba(255, 255, 255, 0.95);
-  border-bottom-color: rgba(255, 255, 255, 0.95);
-}
-
 body.theme-rainbow #categoryContainer button.active {
   background-color: rgba(255, 255, 255, 0.9);
   color: #000;
@@ -235,70 +175,16 @@ body.theme-rainbow #categoryContainer button.active {
   cursor: default;
 }
 
-body.theme-rainbow .tab,
-body.theme-rainbow button,
-body.theme-rainbow select {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #000;
-  border: 1px solid white;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-body.theme-rainbow .tab.active,
-body.theme-rainbow button:hover,
-body.theme-rainbow .tab:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-  transform: scale(1.03);
-}
-
 @keyframes rainbowFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* ========== Compatibility Result Styling ========== */
+/* Compatibility result box */
 #comparisonResult {
   margin-top: 20px;
   padding: 10px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* ========== Tab Styling ========== */
-.tab-container {
-  display: flex;
-  margin: 10px 0 20px 0;
-  border-bottom: 2px solid #666;
-}
-
-.tab {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 4px;
-  border: 1px solid #666;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  background-color: #ddd;
-  color: #000;
-  cursor: pointer;
-  transition: background-color 0.3s, font-weight 0.3s;
-}
-
-.tab:hover {
-  background-color: #eee;
-}
-
-.tab.active {
-  background-color: #fff;
-  font-weight: bold;
-  border-bottom: 2px solid #fff;
-  cursor: default;
 }
