@@ -1,15 +1,15 @@
 // Theme switching logic
 const themeSelector = document.getElementById('themeSelector');
 const savedTheme = localStorage.getItem('selectedTheme');
+const outerWildsBanner = document.getElementById('outerWildsBanner');
+const monsterPromBanner = document.getElementById('monsterPromBanner');
 
-// Apply saved theme on load
 if (savedTheme) {
   document.body.className = savedTheme;
   themeSelector.value = savedTheme;
   updateBannerVisibility(savedTheme);
 }
 
-// Update theme and save preference
 themeSelector.addEventListener('change', () => {
   const selectedTheme = themeSelector.value;
   document.body.className = selectedTheme;
@@ -17,18 +17,11 @@ themeSelector.addEventListener('change', () => {
   updateBannerVisibility(selectedTheme);
 });
 
-// Show/hide banners based on selected theme
 function updateBannerVisibility(theme) {
-  const outerWildsBanner = document.getElementById('outerWildsBanner');
-  const monsterPromBanner = document.getElementById('monsterPromBanner');
-
-  if (outerWildsBanner) {
-    outerWildsBanner.style.display = (theme === 'theme-outer-wilds') ? 'block' : 'none';
-  }
-
-  if (monsterPromBanner) {
-    monsterPromBanner.style.display = (theme === 'theme-monster-prom') ? 'block' : 'none';
-  }
+  if (outerWildsBanner)
+    outerWildsBanner.style.display = theme === 'theme-outer-wilds' ? 'block' : 'none';
+  if (monsterPromBanner)
+    monsterPromBanner.style.display = theme === 'theme-monster-prom' ? 'block' : 'none';
 }
 
 // Tab switching logic
@@ -51,10 +44,8 @@ function switchTab(action) {
   }
 }
 
-// Add tab event listeners
 document.getElementById('givingTab').addEventListener('click', () => switchTab('Giving'));
 document.getElementById('receivingTab').addEventListener('click', () => switchTab('Receiving'));
 document.getElementById('neutralTab').addEventListener('click', () => switchTab('Neutral'));
 
-// Set default tab on load
 switchTab('Giving');
