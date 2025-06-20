@@ -1,3 +1,38 @@
+// ================== THEME SWITCHING & BANNER CONTROL ==================
+const themeSelector = document.getElementById('themeSelector');
+const savedTheme = localStorage.getItem('selectedTheme');
+
+// Apply saved theme on load
+if (savedTheme) {
+  document.body.className = savedTheme;
+  themeSelector.value = savedTheme;
+  toggleBannerImages(savedTheme);
+}
+
+// Update theme and save preference
+themeSelector.addEventListener('change', () => {
+  const selectedTheme = themeSelector.value;
+  document.body.className = selectedTheme;
+  localStorage.setItem('selectedTheme', selectedTheme);
+  toggleBannerImages(selectedTheme);
+});
+
+// Show correct banner based on theme
+function toggleBannerImages(theme) {
+  const outerwildBanner = document.querySelector('.outerwilds-banner');
+  const monsterpromBanner = document.querySelector('.monsterprom-banner');
+
+  if (outerwildBanner) outerwildBanner.style.display = 'none';
+  if (monsterpromBanner) monsterpromBanner.style.display = 'none';
+
+  if (theme === 'theme-outer-wilds' && outerwildBanner) {
+    outerwildBanner.style.display = 'block';
+  } else if (theme === 'theme-monster-prom' && monsterpromBanner) {
+    monsterpromBanner.style.display = 'block';
+  }
+}
+
+// ================== EXISTING KINK SURVEY LOGIC ==================
 const categoryContainer = document.getElementById('categoryContainer');
 const kinkList = document.getElementById('kinkList');
 
@@ -5,36 +40,6 @@ let surveyA = null;
 let surveyB = null;
 let currentAction = 'Giving';
 let currentCategory = null;
-
-// Theme switching logic
-const themeSelector = document.getElementById('themeSelector');
-const savedTheme = localStorage.getItem('selectedTheme');
-
-if (savedTheme) {
-  document.body.className = savedTheme;
-  themeSelector.value = savedTheme;
-  toggleBanner(savedTheme);
-}
-
-themeSelector.addEventListener('change', () => {
-  const selectedTheme = themeSelector.value;
-  document.body.className = selectedTheme;
-  localStorage.setItem('selectedTheme', selectedTheme);
-  toggleBanner(selectedTheme);
-});
-
-function toggleBanner(theme) {
-  const outerBanner = document.querySelector('.outerwilds-banner');
-  const monsterBanner = document.querySelector('.monsterprom-banner');
-
-  if (outerBanner) {
-    outerBanner.style.display = theme === 'theme-outer-wilds' ? 'block' : 'none';
-  }
-
-  if (monsterBanner) {
-    monsterBanner.style.display = theme === 'theme-monster-prom' ? 'block' : 'none';
-  }
-}
 
 document.getElementById('fileA').addEventListener('change', (e) => {
   const reader = new FileReader();
@@ -51,7 +56,6 @@ document.getElementById('fileA').addEventListener('change', (e) => {
 });
 
 document.getElementById('newSurveyBtn').addEventListener('click', () => {
-  //update template version
   fetch('template-survey.json?v=9')
     .then(response => {
       if (!response.ok) throw new Error('Failed to load template file.');
@@ -110,6 +114,7 @@ function showKinks(category) {
     container.appendChild(label);
 
     const select = document.createElement('select');
+
     const emptyOption = document.createElement('option');
     emptyOption.value = '';
     emptyOption.textContent = '—';
@@ -156,10 +161,9 @@ document.getElementById('downloadBtn').onclick = () => {
     return;
   }
 
-  const blob = new Blob(
-    [JSON.stringify(surveyA, null, 2)],
-    { type: 'application/json' }
-  );
+  const blob = new Blob([JSON.stringify(surveyA, null, 2)], {
+    type: 'application/json'
+  });
 
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -240,4 +244,3 @@ document.getElementById('compareBtn').onclick = () => {
 
   resultDiv.innerHTML = output;
 };
-
