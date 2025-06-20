@@ -78,7 +78,7 @@
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
       //update template version
-      fetch('template-survey.json?v=25')
+      fetch('template-survey.json?v=26')
         .then(response => {
           if (!response.ok) throw new Error('Failed to load template file.');
           return response.json();
