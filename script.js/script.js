@@ -1,13 +1,41 @@
 const categoryContainer = document.getElementById('categoryContainer');
 const kinkList = document.getElementById('kinkList');
-const banner = document.querySelector('.outerwilds-banner');
 
 let surveyA = null;
 let surveyB = null;
 let currentAction = 'Giving';
 let currentCategory = null;
 
-// Load Survey A
+// Theme switching logic
+const themeSelector = document.getElementById('themeSelector');
+const savedTheme = localStorage.getItem('selectedTheme');
+
+if (savedTheme) {
+  document.body.className = savedTheme;
+  themeSelector.value = savedTheme;
+  toggleBanner(savedTheme);
+}
+
+themeSelector.addEventListener('change', () => {
+  const selectedTheme = themeSelector.value;
+  document.body.className = selectedTheme;
+  localStorage.setItem('selectedTheme', selectedTheme);
+  toggleBanner(selectedTheme);
+});
+
+function toggleBanner(theme) {
+  const outerBanner = document.querySelector('.outerwilds-banner');
+  const monsterBanner = document.querySelector('.monsterprom-banner');
+
+  if (outerBanner) {
+    outerBanner.style.display = theme === 'theme-outer-wilds' ? 'block' : 'none';
+  }
+
+  if (monsterBanner) {
+    monsterBanner.style.display = theme === 'theme-monster-prom' ? 'block' : 'none';
+  }
+}
+
 document.getElementById('fileA').addEventListener('change', (e) => {
   const reader = new FileReader();
   reader.onload = (ev) => {
@@ -22,7 +50,6 @@ document.getElementById('fileA').addEventListener('change', (e) => {
   reader.readAsText(e.target.files[0]);
 });
 
-// Load Survey Template
 document.getElementById('newSurveyBtn').addEventListener('click', () => {
   //update template version
   fetch('template-survey.json?v=9')
@@ -37,7 +64,6 @@ document.getElementById('newSurveyBtn').addEventListener('click', () => {
     .catch(err => alert('Error loading template: ' + err.message));
 });
 
-// Load Survey B
 document.getElementById('fileB').addEventListener('change', (e) => {
   const reader = new FileReader();
   reader.onload = (ev) => {
@@ -51,32 +77,6 @@ document.getElementById('fileB').addEventListener('change', (e) => {
   reader.readAsText(e.target.files[0]);
 });
 
-// Theme switching logic
-const themeSelector = document.getElementById('themeSelector');
-const savedTheme = localStorage.getItem('selectedTheme');
-
-// Apply saved theme on load
-if (savedTheme) {
-  document.body.className = savedTheme;
-  themeSelector.value = savedTheme;
-  toggleBanner(savedTheme);
-}
-
-// Update theme and save preference
-themeSelector.addEventListener('change', () => {
-  const selectedTheme = themeSelector.value;
-  document.body.className = selectedTheme;
-  localStorage.setItem('selectedTheme', selectedTheme);
-  toggleBanner(selectedTheme);
-});
-
-function toggleBanner(theme) {
-  if (banner) {
-    banner.style.display = theme === 'theme-outer-wilds' ? 'block' : 'none';
-  }
-}
-
-// Display categories
 function showCategories() {
   categoryContainer.innerHTML = '';
   if (!surveyA) return;
@@ -90,7 +90,6 @@ function showCategories() {
   });
 }
 
-// Display kinks per category and rating select
 function showKinks(category) {
   currentCategory = category;
   kinkList.innerHTML = '';
@@ -111,7 +110,6 @@ function showKinks(category) {
     container.appendChild(label);
 
     const select = document.createElement('select');
-
     const emptyOption = document.createElement('option');
     emptyOption.value = '';
     emptyOption.textContent = '—';
@@ -134,7 +132,6 @@ function showKinks(category) {
   });
 }
 
-// Action buttons
 document.getElementById('givingBtn').onclick = () => {
   currentAction = 'Giving';
   showCategories();
@@ -153,14 +150,17 @@ document.getElementById('neutralBtn').onclick = () => {
   if (currentCategory) showKinks(currentCategory);
 };
 
-// Download survey
 document.getElementById('downloadBtn').onclick = () => {
   if (!surveyA) {
     alert('No survey loaded.');
     return;
   }
 
-  const blob = new Blob([JSON.stringify(surveyA, null, 2)], { type: 'application/json' });
+  const blob = new Blob(
+    [JSON.stringify(surveyA, null, 2)],
+    { type: 'application/json' }
+  );
+
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -169,7 +169,6 @@ document.getElementById('downloadBtn').onclick = () => {
   URL.revokeObjectURL(url);
 };
 
-// Compare Surveys
 document.getElementById('compareBtn').onclick = () => {
   const resultDiv = document.getElementById('comparisonResult');
   resultDiv.innerHTML = '';
@@ -231,8 +230,14 @@ document.getElementById('compareBtn').onclick = () => {
 
   const avgScore = Math.round(totalScore / count);
   let output = `<h3>Compatibility Score: ${avgScore}%</h3>`;
-  if (redFlags.length) output += `<p>🚩 Red flags: ${[...new Set(redFlags)].join(', ')}</p>`;
-  if (yellowFlags.length) output += `<p>⚠️ Yellow flags: ${[...new Set(yellowFlags)].join(', ')}</p>`;
+
+  if (redFlags.length) {
+    output += `<p>🚩 Red flags: ${[...new Set(redFlags)].join(', ')}</p>`;
+  }
+  if (yellowFlags.length) {
+    output += `<p>⚠️ Yellow flags: ${[...new Set(yellowFlags)].join(', ')}</p>`;
+  }
+
   resultDiv.innerHTML = output;
 };
 

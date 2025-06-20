@@ -143,6 +143,20 @@ body.theme-outer-wilds .outerwilds-banner {
   margin-bottom: 20px;
 }
 
+.monsterprom-banner {
+  display: none;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-bottom: 4px solid #ff69b4;
+}
+
+/* Show only in Monster Prom 4 theme */
+body.theme-monster-prom .monsterprom-banner {
+  display: block;
+}
+
 /* Monster Prom Theme */
 body.theme-monster-prom {
   background-color: #400040;
