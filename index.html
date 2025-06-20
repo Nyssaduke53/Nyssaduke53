@@ -14,20 +14,8 @@
 
 
   <h1>Kink Compatibility Survey</h1>
-  <div>
-    <div id="themeControl">
-      <label for="themeSelector">🎨 Select Theme:</label>
-      <select id="themeSelector">
-        <option value="dark-mode">Dark</option>
-        <option value="light-mode">Light</option>
-        <option value="theme-blue">Blue</option>
-        <option value="theme-outer-wilds">Outer Wilds</option>
-        <option value="theme-monster-prom">Monster Prom 4</option>
-      </select>
     </div>
     ...
-
-  <h1>Kink Compatibility Survey</h1>
 
   <div>
     <div id="themeControl">
@@ -90,7 +78,7 @@
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
       //update template version
-      fetch('template-survey.json?v=22')
+      fetch('template-survey.json?v=23')
         .then(response => {
           if (!response.ok) throw new Error('Failed to load template file.');
           return response.json();
