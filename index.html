@@ -7,7 +7,8 @@
 </head>
 <body>
   <img id="outerWildsBanner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Outer Wilds Banner" class="theme-banner" />
-<img src="https://freeimghost.net/images/2025/06/20/yourethemaindish.png" alt="you'rethemaindish" border="0">
+<img id="monsterPromBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish.png" alt="Monster Prom Banner" class="theme-banner" />
+
 
 
 
@@ -72,7 +73,7 @@
     });
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
-      fetch('template-survey.json?v=50')
+      fetch('template-survey.json?v=51')
         .then(response => {
           if (!response.ok) throw new Error('Failed to load template file.');
           return response.json();
