@@ -5,23 +5,23 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hidden by default */
+/* Outer Wilds Theme Banner */
 #outerWildsBanner {
   display: none;
   width: 100%;
   height: 300px;
-  background: url('https://media.tenor.com/6jFqpR7JWg0AAAAM/outer-wilds-space.gif') center center no-repeat;
+  background: url('https://upload.wikimedia.org/wikipedia/en/7/71/Outer_Wilds_cover_art.jpg') center center no-repeat;
   background-size: cover;
-  background-attachment: scroll;
   opacity: 0.9;
   margin-bottom: 20px;
   border-bottom: 4px solid #ffde8d;
 }
 
-/* Show banner only in Outer Wilds theme */
+/* Show only when Outer Wilds theme is active */
 body.theme-outer-wilds #outerWildsBanner {
   display: block;
 }
+
 
 }
 
