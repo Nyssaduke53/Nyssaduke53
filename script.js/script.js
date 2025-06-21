@@ -18,10 +18,12 @@ themeSelector.addEventListener('change', () => {
 });
 
 function updateBannerVisibility(theme) {
-  if (outerWildsBanner)
+  if (outerWildsBanner) {
     outerWildsBanner.style.display = theme === 'theme-outer-wilds' ? 'block' : 'none';
-  if (monsterPromBanner)
+  }
+  if (monsterPromBanner) {
     monsterPromBanner.style.display = theme === 'theme-monster-prom' ? 'block' : 'none';
+  }
 }
 
 // Tab switching logic
@@ -35,7 +37,7 @@ function switchTab(action) {
   const activeTab = document.getElementById(`${action.toLowerCase()}Tab`);
   if (activeTab) activeTab.classList.add('active');
 
-  // Refresh category/kink display
+  // Refresh category and kink list
   if (typeof showCategories === 'function') {
     showCategories();
     if (typeof currentCategory !== 'undefined' && currentCategory) {
@@ -44,8 +46,9 @@ function switchTab(action) {
   }
 }
 
-document.getElementById('givingTab').addEventListener('click', () => switchTab('Giving'));
-document.getElementById('receivingTab').addEventListener('click', () => switchTab('Receiving'));
-document.getElementById('neutralTab').addEventListener('click', () => switchTab('Neutral'));
+document.getElementById('givingTab')?.addEventListener('click', () => switchTab('Giving'));
+document.getElementById('receivingTab')?.addEventListener('click', () => switchTab('Receiving'));
+document.getElementById('neutralTab')?.addEventListener('click', () => switchTab('Neutral'));
 
+// Initialize default tab
 switchTab('Giving');
