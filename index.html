@@ -5,14 +5,9 @@
   <title>Kink Compatibility</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body class="dark-mode">
-
+<body>
   <img id="outerWildsBanner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Outer Wilds Banner" class="theme-banner" />
-<img id="monsterPromBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish.png" alt="Monster Prom Banner" class="theme-banner" />
-
-
-
+  <img id="monsterPromBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish_banner.png" alt="Monster Prom Banner" class="theme-banner" />
 
   <h1>Kink Compatibility Survey</h1>
 
@@ -65,7 +60,6 @@
       reader.onload = (ev) => {
         try {
           surveyA = JSON.parse(ev.target.result);
-          console.log('Survey A loaded:', surveyA);
           showCategories();
         } catch {
           alert('Invalid JSON file for Survey A.');
@@ -92,7 +86,6 @@
       reader.onload = (ev) => {
         try {
           surveyB = JSON.parse(ev.target.result);
-          console.log('Survey B loaded:', surveyB);
         } catch {
           alert('Invalid JSON file for Survey B.');
         }
