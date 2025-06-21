@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Kink Compatibility</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v56">
   <style>
     body {
       margin: 0;
@@ -12,14 +12,14 @@
 
     .theme-banner {
       width: 100%;
-      max-height: 250px;
-      object-fit: cover;
+      height: auto;
       display: none;
     }
 
     #themeControl {
       padding: 1em;
       background: #f4f4f4;
+      text-align: center;
     }
 
     .tab-container {
@@ -44,9 +44,15 @@
       font-weight: bold;
     }
 
+    .survey-controls {
+      text-align: center;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+
     #downloadBtn,
     #newSurveyBtn {
-      margin: 2em 0 1em 0;
+      margin: 0 10px;
       padding: 10px 20px;
       font-size: 1em;
     }
@@ -89,11 +95,13 @@
 </head>
 
 <body class="dark-mode">
+  <!-- Banners -->
   <img id="outerWildsBanner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Outer Wilds Banner" class="theme-banner" />
   <img id="monsterPromBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish_banner.png" alt="Monster Prom Banner" class="theme-banner" />
 
   <h1 style="text-align:center;">Kink Compatibility Survey</h1>
 
+  <!-- Theme Selector -->
   <div id="themeControl">
     <label for="themeSelector">🎨 Select Theme:</label>
     <select id="themeSelector">
@@ -106,20 +114,24 @@
     </select>
   </div>
 
+  <!-- Tabs -->
   <div class="tab-container">
     <div class="tab active" id="givingTab">Giving</div>
     <div class="tab" id="receivingTab">Receiving</div>
     <div class="tab" id="neutralTab">Neutral</div>
   </div>
 
-  <div style="text-align:center;">
+  <!-- Survey Buttons -->
+  <div class="survey-controls">
     <button id="downloadBtn">Download Updated Survey</button>
     <button id="newSurveyBtn">Start New Survey</button>
   </div>
 
+  <!-- Dynamic Content -->
   <div id="categoryContainer" style="text-align:center; padding: 1em;"></div>
   <div id="kinkList" style="padding: 1em;"></div>
 
+  <!-- Upload Section -->
   <h3>Upload Your Survey</h3>
   <input type="file" id="fileA" />
 
@@ -129,7 +141,7 @@
   <button id="compareBtn">Compare</button>
   <div id="comparisonResult" style="padding: 1em;"></div>
 
-  <script src="js/main.js?v56"></script>
+  <!-- JavaScript -->
+  <script src="js/main.js?v57"></script>
 </body>
 </html>
-
