@@ -5,39 +5,44 @@
   <title>Kink Compatibility</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="dark-mode">
-  <!-- TEMPLATE VERSION: v59 -->
+<body>
+  <!-- Theme Banners -->
   <img id="outerWildsBanner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Outer Wilds Banner" class="theme-banner" />
   <img id="monsterPromBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish_banner.png" alt="Monster Prom Banner" class="theme-banner" />
 
   <h1>Kink Compatibility Survey</h1>
 
-  <div>
-    <div id="themeControl">
-      <label for="themeSelector">🎨 Select Theme:</label>
-      <select id="themeSelector">
-        <option value="dark-mode">Dark</option>
-        <option value="light-mode">Light</option>
-        <option value="theme-blue">Blue</option>
-        <option value="theme-outer-wilds">Outer Wilds</option>
-        <option value="theme-monster-prom">Monster Prom 4</option>
-        <option value="theme-rainbow">Rainbow</option>
-      </select>
-    </div>
-
-    <div class="tab-container">
-      <div class="tab active" id="givingTab">Giving</div>
-      <div class="tab" id="receivingTab">Receiving</div>
-      <div class="tab" id="neutralTab">Neutral</div>
-    </div>
-
-    <button id="downloadBtn">Download Updated Survey</button>
-    <button id="newSurveyBtn">Start New Survey</button>
+  <!-- Theme Selector -->
+  <div id="themeControl">
+    <label for="themeSelector">🎨 Select Theme:</label>
+    <select id="themeSelector">
+      <option value="dark-mode">Dark</option>
+      <option value="light-mode">Light</option>
+      <option value="theme-blue">Blue</option>
+      <option value="theme-outer-wilds">Outer Wilds</option>
+      <option value="theme-monster-prom">Monster Prom 4</option>
+      <option value="theme-rainbow">Rainbow</option>
+    </select>
   </div>
 
+  <!-- Tabs -->
+  <div class="tab-container">
+    <div class="tab active" id="givingTab">Giving</div>
+    <div class="tab" id="receivingTab">Receiving</div>
+    <div class="tab" id="neutralTab">Neutral</div>
+  </div>
+
+  <!-- Survey Control Buttons -->
+  <div style="text-align: center;">
+    <button id="downloadBtn">Download Updated Survey</button>
+    <button id="newSurveyBtn">Start New Survey (Template v59)</button>
+  </div>
+
+  <!-- Dynamic Category and Kink List -->
   <div id="categoryContainer"></div>
   <div id="kinkList"></div>
 
+  <!-- Upload Surveys -->
   <h3>Upload Your Survey</h3>
   <input type="file" id="fileA" />
 
@@ -47,6 +52,7 @@
   <button id="compareBtn">Compare</button>
   <div id="comparisonResult"></div>
 
+  <!-- JavaScript -->
   <script src="js/script.js"></script>
 </body>
 </html>

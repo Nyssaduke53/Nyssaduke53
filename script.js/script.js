@@ -1,13 +1,17 @@
-// JavaScript for Kink Compatibility Survey
+// 🛠 script.js
 
 const categoryContainer = document.getElementById('categoryContainer');
 const kinkList = document.getElementById('kinkList');
+const outerWildsBanner = document.getElementById('outerWildsBanner');
+const monsterPromBanner = document.getElementById('monsterPromBanner');
+const themeSelector = document.getElementById('themeSelector');
+
 let surveyA = null;
 let surveyB = null;
 let currentAction = 'Giving';
 let currentCategory = null;
 
-// Load survey A
+// Load Survey A
 document.getElementById('fileA').addEventListener('change', (e) => {
   const reader = new FileReader();
   reader.onload = (ev) => {
@@ -21,7 +25,7 @@ document.getElementById('fileA').addEventListener('change', (e) => {
   reader.readAsText(e.target.files[0]);
 });
 
-// Load survey B
+// Load Survey B
 document.getElementById('fileB').addEventListener('change', (e) => {
   const reader = new FileReader();
   reader.onload = (ev) => {
@@ -34,21 +38,18 @@ document.getElementById('fileB').addEventListener('change', (e) => {
   reader.readAsText(e.target.files[0]);
 });
 
-// Start new survey
+// New Survey Template
 document.getElementById('newSurveyBtn').addEventListener('click', () => {
   fetch('template-survey.json?v=58')
-    .then(response => {
-      if (!response.ok) throw new Error('Failed to load template file.');
-      return response.json();
-    })
+    .then(res => res.json())
     .then(data => {
       surveyA = data;
       showCategories();
     })
-    .catch(err => alert('Error loading template: ' + err.message));
+    .catch(() => alert('Error loading template.'));
 });
 
-// Show categories
+// Show Categories
 function showCategories() {
   categoryContainer.innerHTML = '';
   if (!surveyA) return;
@@ -58,7 +59,6 @@ function showCategories() {
     btn.textContent = cat;
     if (currentCategory === cat) btn.classList.add('active');
     btn.onclick = () => {
-      if (currentCategory === cat) return;
       currentCategory = cat;
       showCategories();
       showKinks(cat);
@@ -67,54 +67,48 @@ function showCategories() {
   });
 }
 
-// Show kinks
+// Show Kinks in Current Tab
 function showKinks(category) {
-  currentCategory = category;
   kinkList.innerHTML = '';
   if (!surveyA) return;
-  const kinks = surveyA[category][currentAction];
-  if (!kinks || kinks.length === 0) {
+  const kinks = surveyA[category][currentAction] || [];
+  if (!kinks.length) {
     kinkList.textContent = 'No items here.';
     return;
   }
 
-  kinks.forEach((kink) => {
+  kinks.forEach(kink => {
     const container = document.createElement('div');
     container.classList.add('kink-item');
 
     const label = document.createElement('span');
-    label.textContent = kink.name + ': ';
-    container.appendChild(label);
+    label.textContent = `${kink.name}: `;
 
     const select = document.createElement('select');
-    const emptyOption = document.createElement('option');
-    emptyOption.value = '';
-    emptyOption.textContent = '—';
-    select.appendChild(emptyOption);
-
+    select.innerHTML = '<option value="">—</option>';
     for (let i = 1; i <= 6; i++) {
-      const option = document.createElement('option');
-      option.value = i;
-      option.textContent = i;
-      if (kink.rating == i) option.selected = true;
-      select.appendChild(option);
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = i;
+      if (kink.rating == i) opt.selected = true;
+      select.appendChild(opt);
     }
 
-    select.addEventListener('change', () => {
-      kink.rating = select.value === '' ? null : Number(select.value);
-    });
+    select.onchange = () => {
+      kink.rating = select.value ? Number(select.value) : null;
+    };
 
-    container.appendChild(select);
+    container.append(label, select);
     kinkList.appendChild(container);
   });
 }
 
-// Tab switching
+// Tab Switching
 function switchTab(action) {
   currentAction = action;
   showCategories();
   if (currentCategory) showKinks(currentCategory);
-  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.getElementById(`${action.toLowerCase()}Tab`).classList.add('active');
 }
 
@@ -122,12 +116,9 @@ document.getElementById('givingTab').onclick = () => switchTab('Giving');
 document.getElementById('receivingTab').onclick = () => switchTab('Receiving');
 document.getElementById('neutralTab').onclick = () => switchTab('Neutral');
 
-// Download survey
+// Download Survey A
 document.getElementById('downloadBtn').onclick = () => {
-  if (!surveyA) {
-    alert('No survey loaded.');
-    return;
-  }
+  if (!surveyA) return alert('No survey loaded.');
   const blob = new Blob([JSON.stringify(surveyA, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -137,7 +128,7 @@ document.getElementById('downloadBtn').onclick = () => {
   URL.revokeObjectURL(url);
 };
 
-// Compare surveys
+// Compare Surveys
 document.getElementById('compareBtn').onclick = () => {
   const resultDiv = document.getElementById('comparisonResult');
   resultDiv.innerHTML = '';
@@ -148,19 +139,24 @@ document.getElementById('compareBtn').onclick = () => {
   }
 
   const categories = Object.keys(surveyA);
-  let totalScore = 0, count = 0, redFlags = [], yellowFlags = [];
+  let totalScore = 0;
+  let count = 0;
+  const redFlags = [];
+  const yellowFlags = [];
 
-  categories.forEach(cat => {
-    if (!surveyB[cat]) return;
+  categories.forEach(category => {
+    if (!surveyB[category]) return;
     ['Giving', 'Receiving', 'Neutral'].forEach(action => {
-      const listA = surveyA[cat][action] || [];
-      const listB = surveyB[cat][
+      const listA = surveyA[category][action] || [];
+      const listB = surveyB[category][
         action === 'Giving' ? 'Receiving' :
         action === 'Receiving' ? 'Giving' : 'Neutral'
       ] || [];
 
       listA.forEach(itemA => {
-        const match = listB.find(itemB => itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase());
+        const match = listB.find(itemB =>
+          itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase()
+        );
         if (match) {
           const a = parseInt(itemA.rating);
           const b = parseInt(match.rating);
@@ -176,35 +172,31 @@ document.getElementById('compareBtn').onclick = () => {
     });
   });
 
-  const avgScore = count ? Math.round(totalScore / count) : 0;
-  resultDiv.innerHTML = `<h3>Compatibility Score: ${avgScore}%</h3>`;
+  const avg = count ? Math.round(totalScore / count) : 0;
+  resultDiv.innerHTML = `<h3>Compatibility Score: ${avg}%</h3>`;
   if (redFlags.length) resultDiv.innerHTML += `<p>🚩 Red flags: ${[...new Set(redFlags)].join(', ')}</p>`;
   if (yellowFlags.length) resultDiv.innerHTML += `<p>⚠️ Yellow flags: ${[...new Set(yellowFlags)].join(', ')}</p>`;
 };
 
-// Theme switching
-const themeSelector = document.getElementById('themeSelector');
-const outerWildsBanner = document.getElementById('outerWildsBanner');
-const monsterPromBanner = document.getElementById('monsterPromBanner');
+// Theme Selection
 const savedTheme = localStorage.getItem('selectedTheme');
-
-function updateBanners(theme) {
-  outerWildsBanner.style.display = theme === 'theme-outer-wilds' ? 'block' : 'none';
-  monsterPromBanner.style.display = theme === 'theme-monster-prom' ? 'block' : 'none';
-}
-
 if (savedTheme) {
   document.body.className = savedTheme;
   themeSelector.value = savedTheme;
   updateBanners(savedTheme);
 }
 
-themeSelector.addEventListener('change', () => {
-  const selectedTheme = themeSelector.value;
-  document.body.className = selectedTheme;
-  localStorage.setItem('selectedTheme', selectedTheme);
-  updateBanners(selectedTheme);
-});
+themeSelector.onchange = () => {
+  const theme = themeSelector.value;
+  document.body.className = theme;
+  localStorage.setItem('selectedTheme', theme);
+  updateBanners(theme);
+};
+
+function updateBanners(theme) {
+  outerWildsBanner.style.display = theme === 'theme-outer-wilds' ? 'block' : 'none';
+  monsterPromBanner.style.display = theme === 'theme-monster-prom' ? 'block' : 'none';
+}
 
 // Initialize
 switchTab('Giving');

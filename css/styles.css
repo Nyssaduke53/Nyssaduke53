@@ -1,150 +1,217 @@
+/* styles.css */
 
+/* Base Styles */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #f0f0f0;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
   text-align: center;
-  margin-top: 1em;
+  margin-bottom: 1rem;
 }
 
-.theme-banner {
+button, select {
+  font-size: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Tabs */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.tab {
+  background: #222;
+  padding: 0.75rem 2rem;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tab.active {
+  background: #0066cc;
+  color: white;
+}
+
+/* Category Buttons */
+#categoryContainer button {
+  margin: 0.3rem;
+  padding: 0.5rem 1.5rem;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+}
+
+#categoryContainer button.active {
+  background-color: #00bcd4;
+}
+
+/* Kink List Styling */
+.kink-item {
+  background-color: rgba(255, 255, 255, 0.08);
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
   width: 100%;
+  transition: background-color 0.3s;
+}
+
+.kink-item select {
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+
+/* Receiving Tab Special Color */
+#receivingTab.active {
+  background: orange;
+  color: black;
+}
+
+/* Theme Banners */
+.theme-banner {
   display: none;
-  max-height: 200px;
-  object-fit: cover;
+  max-width: 100%;
+  margin: 0 auto 1rem auto;
+  border-radius: 10px;
+}
+
+/* Result Box */
+#comparisonResult {
+  margin-top: 2rem;
+  text-align: center;
 }
 
 #themeControl {
   text-align: center;
-  margin: 1em 0;
+  margin-bottom: 1rem;
 }
 
-.tab-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1em;
-  gap: 20px;
+/* Light Mode */
+.light-mode {
+  background-color: #fff;
+  color: #111;
 }
 
-.tab {
-  padding: 12px 30px;
-  cursor: pointer;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 0.3s;
-  font-weight: bold;
+.light-mode .tab {
+  background-color: #eee;
+  color: #111;
 }
 
-.tab.active {
-  background-color: #ff90c2;
-  color: #000;
-}
-
-button {
-  margin: 0.5em;
-  padding: 10px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
+.light-mode .tab.active {
   background-color: #444;
   color: #fff;
-  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #666;
-}
-
-#categoryContainer {
-  text-align: center;
-  margin: 1em;
-}
-
-#categoryContainer button {
-  margin: 0.3em;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-size: 1em;
-  background-color: #999;
-  color: #fff;
-  border: none;
-}
-
-#kinkList {
-  max-width: 900px;
-  margin: 2em auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#kinkList div {
-  padding: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.1em;
-}
-
-/* Theme - Dark */
-.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-/* Theme - Light */
-.light-mode {
-  background-color: #ffffff;
-  color: #222;
-}
-
-/* Theme - Blue */
-.theme-blue {
-  background-color: #0f1a40;
-  color: #cce7ff;
-}
-
-.theme-blue .tab.active {
-  background-color: #5ab2ff;
+.light-mode .kink-item {
+  background-color: #f0f0f0;
   color: #000;
 }
 
-/* Theme - Outer Wilds */
-.theme-outer-wilds {
-  background-color: #1b1f2b;
-  color: #e0d0b0;
-}
-
-.theme-outer-wilds .tab.active {
-  background-color: #f39c12;
-  color: #000;
-}
-
-/* Theme - Monster Prom */
-.theme-monster-prom {
-  background-color: #36002e;
-  color: #ffb6ff;
-}
-
-.theme-monster-prom .tab.active {
-  background-color: #ff409d;
-  color: #fff;
-}
-
-/* Theme - Rainbow */
-.theme-rainbow {
-  background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
-  color: #000;
-}
-
-.theme-rainbow .tab.active {
+.light-mode select {
   background-color: #fff;
   color: #000;
 }
 
+/* Blue Theme */
+.theme-blue {
+  background-color: #001f3f;
+  color: #cceeff;
+}
+
+.theme-blue .tab {
+  background-color: #004080;
+  color: #cceeff;
+}
+
+.theme-blue .tab.active {
+  background-color: #00aaff;
+  color: white;
+}
+
+.theme-blue .kink-item {
+  background-color: rgba(0, 170, 255, 0.1);
+}
+
+/* Outer Wilds Theme */
+.theme-outer-wilds {
+  background-color: #0a0a0a;
+  color: #ffcc99;
+}
+
+.theme-outer-wilds .tab {
+  background-color: #402000;
+  color: #ffcc99;
+}
+
+.theme-outer-wilds .tab.active {
+  background-color: #cc6600;
+  color: white;
+}
+
+.theme-outer-wilds .kink-item {
+  background-color: rgba(255, 153, 51, 0.1);
+}
+
+/* Monster Prom Theme */
+.theme-monster-prom {
+  background-color: #300030;
+  color: #ff99ff;
+}
+
+.theme-monster-prom .tab {
+  background-color: #660066;
+  color: #ffccff;
+}
+
+.theme-monster-prom .tab.active {
+  background-color: #ff00cc;
+  color: #fff;
+}
+
+.theme-monster-prom .kink-item {
+  background-color: rgba(255, 0, 204, 0.1);
+}
+
+/* Rainbow Theme */
+.theme-rainbow {
+  background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+  color: white;
+}
+
+.theme-rainbow .kink-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.theme-rainbow .tab {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.theme-rainbow .tab.active {
+  background-color: #ffffff;
+  color: black;
+}
