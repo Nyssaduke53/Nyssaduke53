@@ -16,17 +16,29 @@ body.theme-blue {
   background-color: #001933;
   color: #fff;
 }
-body.theme-outer-wilds {
+body.theme-indigo {
   background-color: #1e1e2e;
   color: #ffde8d;
 }
-body.theme-monster-prom {
+body.theme-pink {
   background-color: #400040;
   color: #ff69b4;
 }
 body.theme-rainbow {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
   color: #000;
+}
+body.theme-green {
+  background-color: #003300;
+  color: #ccffcc;
+}
+body.theme-red {
+  background-color: #330000;
+  color: #ffcccc;
+}
+body.theme-orange {
+  background-color: #663300;
+  color: #fff2e6;
 }
 body.light-mode {
   background-color: #ffffff;
@@ -108,20 +120,20 @@ body.theme-blue .tab.active {
   border: 1px solid #003377;
 }
 
-body.theme-outer-wilds .tab {
+body.theme-indigo .tab {
   background-color: #2b2b3d;
   color: #ffde8d;
 }
-body.theme-outer-wilds .tab.active {
+body.theme-indigo .tab.active {
   background-color: #3b3a5a;
   border: 1px solid #ffde8d;
 }
 
-body.theme-monster-prom .tab {
+body.theme-pink .tab {
   background-color: #663366;
   color: #ff69b4;
 }
-body.theme-monster-prom .tab.active {
+body.theme-pink .tab.active {
   background-color: #ff69b4;
   color: #400040;
   border: 1px solid #800080;
@@ -134,6 +146,34 @@ body.theme-rainbow .tab {
 body.theme-rainbow .tab.active {
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #603636;
+}
+
+body.theme-green .tab {
+  background-color: #005500;
+  color: #ccffcc;
+}
+body.theme-green .tab.active {
+  background-color: #007700;
+  border: 1px solid #004400;
+}
+
+body.theme-red .tab {
+  background-color: #990000;
+  color: #ffcccc;
+}
+body.theme-red .tab.active {
+  background-color: #ff3333;
+  color: #330000;
+  border: 1px solid #990000;
+}
+
+body.theme-orange .tab {
+  background-color: #cc6600;
+  color: #fff2e6;
+}
+body.theme-orange .tab.active {
+  background-color: #ff8800;
+  border: 1px solid #994c00;
 }
 
 /* Buttons and Controls */
