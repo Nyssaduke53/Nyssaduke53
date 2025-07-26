@@ -1,381 +1,1538 @@
-
 {
-    "Bodily Fluids and Functions": {
-      "Giving": [
-        { "name": "Watersports", "rating": null },
-        { "name": "Spit", "rating": null }
-      ],
-      "Receiving": [
-        { "name": "Watersports", "rating": null },
-        { "name": "Spit", "rating": null }
-      ],
-      "Neutral": [
-        { "name": "Cum", "rating": null }
-      ]
-    },
-    "Body Part Torture": {
-      "Giving": [
-        { "name": "Nipple clips", "rating": null },
-        { "name": "Nipple weights", "rating": null },
-        { "name": "Nipple suction cups", "rating": null },
-        { "name": "Cock, Ball Torture (CBT)", "rating": null },
-        { "name": "Clit clips/weights/suction", "rating": null }
-      ],
-      "Receiving": [
-        { "name": "Nipple clips", "rating": null },
-        { "name": "Nipple weights", "rating": null },
-        { "name": "Nipple suction cups", "rating": null },
-        { "name": "Cock, Ball Torture (CBT)", "rating": null },
-        { "name": "Clit clips/weights/suction", "rating": null }
-      ],
-      "Neutral": []
-    },
-    "Bondage and Suspension": {
-      "Giving": [
-        { "name": "Blindfolds", "rating": null },
-        { "name": "Bondage (heavy)", "rating": null },
-        { "name": "Bondage (light)", "rating": null },
-        { "name": "Immobilisation", "rating": null },
-        { "name": "Bondage (multi-day)", "rating": null },
-        { "name": "Bondage (public, under clothing)", "rating": null },
-        { "name": "Leather restraints", "rating": null },
-        { "name": "Chains", "rating": null },
-        { "name": "Ropes", "rating": null },
-        { "name": "Intricate (Japanese) rope bondage", "rating": null },
-        { "name": "Rope body harness", "rating": null },
-        { "name": "Arm & leg sleeves (armbinders)", "rating": null },
-        { "name": "Harnesses (leather)", "rating": null },
-        { "name": "Harnesses (rope)", "rating": null },
-        { "name": "Cuffs (leather)", "rating": null },
-        { "name": "Cuffs (metal)", "rating": null },
-        { "name": "Manacles & Irons", "rating": null },
-        { "name": "Gags (cloth)", "rating": null },
-        { "name": "Gags (rubber)", "rating": null },
-        { "name": "Gags (tape)", "rating": null },
-        { "name": "Gags (phallic)", "rating": null },
-        { "name": "Gags (ring)", "rating": null },
-        { "name": "Gags (ball)", "rating": null },
-        { "name": "Mouth bits", "rating": null },
-        { "name": "Full head hoods", "rating": null },
-        { "name": "Mummification/saran wrapping", "rating": null },
-        { "name": "Straight jackets", "rating": null },
-        { "name": "Suspension (upright)", "rating": null },
-        { "name": "Suspension (horizontal)", "rating": null },
-        { "name": "Suspension (inverted)", "rating": null }
-      ],
-      "Receiving": [
-        { "name": "Blindfolds", "rating": null },
-        { "name": "Bondage (heavy)", "rating": null },
-        { "name": "Bondage (light)", "rating": null },
-        { "name": "Immobilisation", "rating": null },
-        { "name": "Bondage (multi-day)", "rating": null },
-        { "name": "Bondage (public, under clothing)", "rating": null },
-        { "name": "Leather restraints", "rating": null },
-        { "name": "Chains", "rating": null },
-        { "name": "Ropes", "rating": null },
-        { "name": "Intricate (Japanese) rope bondage", "rating": null },
-        { "name": "Rope body harness", "rating": null },
-        { "name": "Arm & leg sleeves (armbinders)", "rating": null },
-        { "name": "Harnesses (leather)", "rating": null },
-        { "name": "Harnesses (rope)", "rating": null },
-        { "name": "Cuffs (leather)", "rating": null },
-        { "name": "Cuffs (metal)", "rating": null },
-        { "name": "Manacles & Irons", "rating": null },
-        { "name": "Gags (cloth)", "rating": null },
-        { "name": "Gags (rubber)", "rating": null },
-        { "name": "Gags (tape)", "rating": null },
-        { "name": "Gags (phallic)", "rating": null },
-        { "name": "Gags (ring)", "rating": null },
-        { "name": "Gags (ball)", "rating": null },
-        { "name": "Mouth bits", "rating": null },
-        { "name": "Full head hoods", "rating": null },
-        { "name": "Mummification/saran wrapping", "rating": null },
-        { "name": "Straight jackets", "rating": null },
-        { "name": "Suspension (upright)", "rating": null },
-        { "name": "Suspension (horizontal)", "rating": null },
-        { "name": "Suspension (inverted)", "rating": null }
-      ],
-      "Neutral": []
-    },
-    "Breath Play": {
-      "Giving": [
-        { "name": "Asphyxiation", "rating": null },
-        { "name": "Breath control", "rating": null },
-        { "name": "Choking", "rating": null },
-        { "name": "Drowning", "rating": null }
-      ],
-      "Receiving": [
-        { "name": "Asphyxiation", "rating": null },
-        { "name": "Breath control", "rating": null },
-        { "name": "Choking", "rating": null },
-        { "name": "Drowning", "rating": null }
-      ],
-      "Neutral": []
-    },
-    "General": {
-      "Giving": [
-        { "name": "Dirty Talking", "rating": null },
-        { "name": "Fingers in mouth", "rating": null },
-        { "name": "Massages", "rating": null },
-        { "name": "Photos / videos", "rating": null },
-        { "name": "Teasing", "rating": null },
-        { "name": "Teasing", "rating": null },
-        { "name": "Humiliation (private)", "rating": null },
-        { "name": "Humiliation (public)", "rating": null },
-        { "name": "Verbal humiliation", "rating": null },
-        { "name": "Spitting", "rating": null },
-        { "name": "Washing mouth out with soap", "rating": null },
-        { "name": "Objectification (art, furniture...)", "rating": null },
-        { "name": "Spanking", "rating": null },
-        { "name": "Flogging", "rating": null },
-        { "name": "Single-tail whips", "rating": null },
-        { "name": "Canes", "rating": null },
-        { "name": "Belts", "rating": null },
-        { "name": "Leather straps", "rating": null },
-        { "name": "Riding crops", "rating": null },
-        { "name": "Hairbrushes", "rating": null },
-        { "name": "Paddles", "rating": null },
-        { "name": "Slapping (back, buttocks, breasts, genitals)", "rating": null },
-        { "name": "Strapping (full body beating)", "rating": null },
-        { "name": "Hair pulling", "rating": null },
-        { "name": "Face slapping", "rating": null }
-      ],
-      "Receiving": [
-        { "name": "Dirty Talking", "rating": null },
-        { "name": "Fingers in mouth", "rating": null },
-        { "name": "Massages", "rating": null },
-        { "name": "Photos / videos", "rating": null },
-        { "name": "Teasing", "rating": null },
-        { "name": "Humiliation (private)", "rating": null },
-        { "name": "Humiliation (public)", "rating": null },
-        { "name": "Verbal humiliation", "rating": null },
-        { "name": "Spitting", "rating": null },
-        { "name": "Washing mouth out with soap", "rating": null },
-        { "name": "Objectification (art, furniture...)", "rating": null },
-        { "name": "Spanking", "rating": null },
-        { "name": "Flogging", "rating": null },
-        { "name": "Single-tail whips", "rating": null },
-        { "name": "Canes", "rating": null },
-        { "name": "Belts", "rating": null },
-        { "name": "Leather straps", "rating": null },
-        { "name": "Riding crops", "rating": null },
-        { "name": "Hairbrushes", "rating": null },
-        { "name": "Paddles", "rating": null },
-        { "name": "Slapping (back, buttocks, breasts, genitals)", "rating": null },
-        { "name": "Strapping (full body beating)", "rating": null },
-        { "name": "Hair pulling", "rating": null },
-        { "name": "Face slapping", "rating": null }
-      ],
-      "Neutral": [
-        { "name": "Belly fucking", "rating": null },
-        { "name": "Contraceptives", "rating": null },
-        { "name": "Cuddles", "rating": null },
-        { "name": "Food Play", "rating": null },
-        { "name": "Kisses", "rating": null },
-        { "name": "Licking", "rating": null },
-        { "name": "Masturbation", "rating": null },
-        { "name": "Navel play", "rating": null },
-        { "name": "Romance / affection", "rating": null },
-        { "name": "Sex toys", "rating": null },
-        { "name": "Sexting /Chat etc", "rating": null },
-        { "name": "Sexting via phone or video call", "rating": null },
-        { "name": "Strip tease", "rating": null },
-        { "name": "Vanilla Sex", "rating": null },
-        { "name": "Voice Notes", "rating": null },
-        { "name": "Shaving (body hair)", "rating": null },
-        { "name": "Sexy clothing (private)", "rating": null },
-        { "name": "Sexy clothing (public)", "rating": null },
-        { "name": "Outdoor scenes", "rating": null },
-        { "name": "Public exposure", "rating": null }
-      ]
-    },
-    "Psychological": {
-  "Giving": [
-    { "name": "Primal/Prey", "rating": null },
-    { "name": "Conditioning", "rating": null },
-    { "name": "COC", "rating": null },
-    { "name": "Psycholagny (hands free, mentally stimulated orgasm).", "rating": null },
-    { "name": "Hypno Play", "rating": null },
-    { "name": "Praise", "rating": null },
-    { "name": "Degradation", "rating": null }
-  ],
-  "Receiving": [
-    { "name": "Primal/Prey", "rating": null },
-    { "name": "Conditioning", "rating": null },
-    { "name": "COC", "rating": null },
-    { "name": "Psycholagny (hands free, mentally stimulated orgasm).", "rating": null },
-    { "name": "Hypno Play", "rating": null },
-    { "name": "Praise", "rating": null },
-    { "name": "Degradation", "rating": null }
-  ],
-  "Neutral": []
-},
-"Sexual Activity": {
-  "Giving": [
-    { "name": "Fellatio/Cunnilingus", "rating": null },
-    { "name": "Swallowing semen(or getting it swallowed)", "rating": null },
-    { "name": "Cumming on Partner", "rating": null },
-    { "name": "Hand jobs", "rating": null },
-    { "name": "Anal sex", "rating": null },
-    { "name": "Anal plugs (small)", "rating": null },
-    { "name": "Anal plugs (large)", "rating": null },
-    { "name": "Anal plug (public, under clothes)", "rating": null },
-    { "name": "Anal beads", "rating": null },
-    { "name": "Vibrator on genitals", "rating": null },
-    { "name": "Fisting", "rating": null },
-    { "name": "Oral/anal play (rimming)", "rating": null },
-    { "name": "Double penetration (oral and vaginal)", "rating": null },
-    { "name": "Double penetration (oral and anal)", "rating": null },
-    { "name": "Double penetration (anal and vaginal)", "rating": null },
-    { "name": "Triple (oral and anal)", "rating": null },
-    { "name": "Forced masturbation", "rating": null },
-    { "name": "Orgasm control", "rating": null }
-  ],
-  "Receiving": [
-    { "name": "Fellatio/Cunnilingus", "rating": null },
-    { "name": "Swallowing semen(or getting it swallowed)", "rating": null },
-    { "name": "Cumming on Partner", "rating": null },
-    { "name": "Hand jobs", "rating": null },
-    { "name": "Anal sex", "rating": null },
-    { "name": "Anal plugs (small)", "rating": null },
-    { "name": "Anal plugs (large)", "rating": null },
-    { "name": "Anal plug (public, under clothes)", "rating": null },
-    { "name": "Anal beads", "rating": null },
-    { "name": "Vibrator on genitals", "rating": null },
-    { "name": "Fisting", "rating": null },
-    { "name": "Oral/anal play (rimming)", "rating": null },
-    { "name": "Double penetration (oral and vaginal)", "rating": null },
-    { "name": "Double penetration (oral and anal)", "rating": null },
-    { "name": "Double penetration (anal and vaginal)", "rating": null },
-    { "name": "Triple (oral and anal)", "rating": null },
-    { "name": "Forced masturbation", "rating": null },
-    { "name": "Orgasm control", "rating": null }
-  ],
-  "Neutral": []
-},
-"Sensation Play": {
-  "Giving": [
-    { "name": "Abrasion", "rating": null },
-    { "name": "Scratching", "rating": null },
-    { "name": "Biting", "rating": null },
-    { "name": "Tickling", "rating": null },
-    { "name": "Kissing", "rating": null },
-    { "name": "Zapping (e.g. elecric fly swatter)", "rating": null },
-    { "name": "Ice cubes", "rating": null },
-    { "name": "Wax Play", "rating": null },
-    { "name": "Fire", "rating": null },
-    { "name": "Clothespins", "rating": null }
-  ],
-  "Receiving": [
-    { "name": "Abrasion", "rating": null },
-    { "name": "Scratching", "rating": null },
-    { "name": "Biting", "rating": null },
-    { "name": "Tickling", "rating": null },
-    { "name": "Kissing", "rating": null },
-    { "name": "Zapping (e.g. elecric fly swatter)", "rating": null },
-    { "name": "Ice cubes", "rating": null },
-    { "name": "Wax Play", "rating": null },
-    { "name": "Fire", "rating": null },
-    { "name": "Clothespins", "rating": null }
-  ],
-  "Neutral": []
-},
-"Other": {
-  "Giving": [
-    { "name": "Feet", "rating": null },
-    { "name": "Boots", "rating": null },
-    { "name": "Underwear", "rating": null },
-    { "name": "Chastity devices", "rating": null },
-    { "name": "Masks", "rating": null },
-    { "name": "Breeding", "rating": null },
-    { "name": "Leather clothing", "rating": null }
-  ],
-  "Receiving": [
-    { "name": "Feet", "rating": null },
-    { "name": "Boots", "rating": null },
-    { "name": "Underwear", "rating": null },
-    { "name": "Chastity devices", "rating": null },
-    { "name": "Masks", "rating": null },
-    { "name": "Breeding", "rating": null },
-    { "name": "Leather clothing", "rating": null }
-  ],
-  "Neutral": []
-},
-"Roleplaying": {
-  "Giving": [
-    { "name": "Fear play", "rating": null },
-    { "name": "Fantasy abandonment", "rating": null },
-    { "name": "Kidnapping", "rating": null },
-    { "name": "Interrogation", "rating": null },
-    { "name": "Sleep deprivation", "rating": null },
-    { "name": "CNC", "rating": null },
-    { "name": "Gang bang", "rating": null },
-    { "name": "Initiation rites", "rating": null },
-    { "name": "Religious scenes", "rating": null },
-    { "name": "Medical scenes", "rating": null },
-    { "name": "Prison scenes", "rating": null },
-    { "name": "Primal/Prey", "rating": null },
-    { "name": "Schoolroom scenes", "rating": null }
-  ],
-  "Receiving": [
-    { "name": "Fear play", "rating": null },
-    { "name": "Fantasy abandonment", "rating": null },
-    { "name": "Kidnapping", "rating": null },
-    { "name": "Interrogation", "rating": null },
-    { "name": "Sleep deprivation", "rating": null },
-    { "name": "CNC", "rating": null },
-    { "name": "Gang bang", "rating": null },
-    { "name": "Initiation rites", "rating": null },
-    { "name": "Religious scenes", "rating": null },
-    { "name": "Medical scenes", "rating": null },
-    { "name": "Prison scenes", "rating": null },
-    { "name": "Primal/Prey", "rating": null },
-    { "name": "Schoolroom scenes", "rating": null }
-  ],
-  "Neutral": []
-},
-"Service and Restrictive Behaviour": {
-  "Giving": [
-    { "name": "(Following) orders", "rating": null },
-    { "name": "Forced servitude", "rating": null },
-    { "name": "Restrictive rules on behaviour", "rating": null },
-    { "name": "Eye contact restrictions", "rating": null },
-    { "name": "Speech restrictions (when, what, to whom)", "rating": null },
-    { "name": "Washroom restrictions", "rating": null },
-    { "name": "Punishments", "rating": null },
-    { "name": "Tasks", "rating": null },
-    { "name": "Massage", "rating": null }
-  ],
-  "Receiving": [
-    { "name": "(Following) orders", "rating": null },
-    { "name": "Forced servitude", "rating": null },
-    { "name": "Restrictive rules on behaviour", "rating": null },
-    { "name": "Eye contact restrictions", "rating": null },
-    { "name": "Speech restrictions (when, what, to whom)", "rating": null },
-    { "name": "Washroom restrictions", "rating": null },
-    { "name": "Punishments", "rating": null },
-    { "name": "Tasks", "rating": null },
-    { "name": "Massage", "rating": null }
-  ],
-  "Neutral": []
-},
-"Voyeurism/Exhibitionism": {
-  "Giving": [
-    { "name": "Forced nudity (private)", "rating": null },
-    { "name": "Forced nudity (around others)", "rating": null },
-    { "name": "Exhibitionism (friends)", "rating": null },
-    { "name": "Exhibitionism (strangers)", "rating": null },
-    { "name": "Modelling for erotic photos", "rating": null }
-  ],
-  "Receiving": [
-    { "name": "Forced nudity (private)", "rating": null },
-    { "name": "Forced nudity (around others)", "rating": null },
-    { "name": "Exhibitionism (friends)", "rating": null },
-    { "name": "Exhibitionism (strangers)", "rating": null },
-    { "name": "Modelling for erotic photos", "rating": null }
-  ],
-  "Neutral": []
-}
-
+  "Bodily Fluids and Functions": {
+    "Giving": [
+      {
+        "name": "Watersports",
+        "rating": null,
+        "id": 1
+      },
+      {
+        "name": "Spit",
+        "rating": null,
+        "id": 2
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Watersports",
+        "rating": null,
+        "id": 3
+      },
+      {
+        "name": "Spit",
+        "rating": null,
+        "id": 4
+      }
+    ],
+    "Neutral": [
+      {
+        "name": "Cum",
+        "rating": null,
+        "id": 5
+      }
+    ]
+  },
+  "Body Part Torture": {
+    "Giving": [
+      {
+        "name": "Nipple clips",
+        "rating": null,
+        "id": 6
+      },
+      {
+        "name": "Nipple weights",
+        "rating": null,
+        "id": 7
+      },
+      {
+        "name": "Nipple suction cups",
+        "rating": null,
+        "id": 8
+      },
+      {
+        "name": "Cock, Ball Torture (CBT)",
+        "rating": null,
+        "id": 9
+      },
+      {
+        "name": "Clit clips/weights/suction",
+        "rating": null,
+        "id": 10
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Nipple clips",
+        "rating": null,
+        "id": 11
+      },
+      {
+        "name": "Nipple weights",
+        "rating": null,
+        "id": 12
+      },
+      {
+        "name": "Nipple suction cups",
+        "rating": null,
+        "id": 13
+      },
+      {
+        "name": "Cock, Ball Torture (CBT)",
+        "rating": null,
+        "id": 14
+      },
+      {
+        "name": "Clit clips/weights/suction",
+        "rating": null,
+        "id": 15
+      }
+    ],
+    "Neutral": []
+  },
+  "Bondage and Suspension": {
+    "Giving": [
+      {
+        "name": "Blindfolds",
+        "rating": null,
+        "id": 16
+      },
+      {
+        "name": "Bondage (heavy)",
+        "rating": null,
+        "id": 17
+      },
+      {
+        "name": "Bondage (light)",
+        "rating": null,
+        "id": 18
+      },
+      {
+        "name": "Immobilisation",
+        "rating": null,
+        "id": 19
+      },
+      {
+        "name": "Bondage (multi-day)",
+        "rating": null,
+        "id": 20
+      },
+      {
+        "name": "Bondage (public, under clothing)",
+        "rating": null,
+        "id": 21
+      },
+      {
+        "name": "Leather restraints",
+        "rating": null,
+        "id": 22
+      },
+      {
+        "name": "Chains",
+        "rating": null,
+        "id": 23
+      },
+      {
+        "name": "Ropes",
+        "rating": null,
+        "id": 24
+      },
+      {
+        "name": "Intricate (Japanese) rope bondage",
+        "rating": null,
+        "id": 25
+      },
+      {
+        "name": "Rope body harness",
+        "rating": null,
+        "id": 26
+      },
+      {
+        "name": "Arm & leg sleeves (armbinders)",
+        "rating": null,
+        "id": 27
+      },
+      {
+        "name": "Harnesses (leather)",
+        "rating": null,
+        "id": 28
+      },
+      {
+        "name": "Harnesses (rope)",
+        "rating": null,
+        "id": 29
+      },
+      {
+        "name": "Cuffs (leather)",
+        "rating": null,
+        "id": 30
+      },
+      {
+        "name": "Cuffs (metal)",
+        "rating": null,
+        "id": 31
+      },
+      {
+        "name": "Manacles & Irons",
+        "rating": null,
+        "id": 32
+      },
+      {
+        "name": "Gags (cloth)",
+        "rating": null,
+        "id": 33
+      },
+      {
+        "name": "Gags (rubber)",
+        "rating": null,
+        "id": 34
+      },
+      {
+        "name": "Gags (tape)",
+        "rating": null,
+        "id": 35
+      },
+      {
+        "name": "Gags (phallic)",
+        "rating": null,
+        "id": 36
+      },
+      {
+        "name": "Gags (ring)",
+        "rating": null,
+        "id": 37
+      },
+      {
+        "name": "Gags (ball)",
+        "rating": null,
+        "id": 38
+      },
+      {
+        "name": "Mouth bits",
+        "rating": null,
+        "id": 39
+      },
+      {
+        "name": "Full head hoods",
+        "rating": null,
+        "id": 40
+      },
+      {
+        "name": "Mummification/saran wrapping",
+        "rating": null,
+        "id": 41
+      },
+      {
+        "name": "Straight jackets",
+        "rating": null,
+        "id": 42
+      },
+      {
+        "name": "Suspension (upright)",
+        "rating": null,
+        "id": 43
+      },
+      {
+        "name": "Suspension (horizontal)",
+        "rating": null,
+        "id": 44
+      },
+      {
+        "name": "Suspension (inverted)",
+        "rating": null,
+        "id": 45
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Blindfolds",
+        "rating": null,
+        "id": 46
+      },
+      {
+        "name": "Bondage (heavy)",
+        "rating": null,
+        "id": 47
+      },
+      {
+        "name": "Bondage (light)",
+        "rating": null,
+        "id": 48
+      },
+      {
+        "name": "Immobilisation",
+        "rating": null,
+        "id": 49
+      },
+      {
+        "name": "Bondage (multi-day)",
+        "rating": null,
+        "id": 50
+      },
+      {
+        "name": "Bondage (public, under clothing)",
+        "rating": null,
+        "id": 51
+      },
+      {
+        "name": "Leather restraints",
+        "rating": null,
+        "id": 52
+      },
+      {
+        "name": "Chains",
+        "rating": null,
+        "id": 53
+      },
+      {
+        "name": "Ropes",
+        "rating": null,
+        "id": 54
+      },
+      {
+        "name": "Intricate (Japanese) rope bondage",
+        "rating": null,
+        "id": 55
+      },
+      {
+        "name": "Rope body harness",
+        "rating": null,
+        "id": 56
+      },
+      {
+        "name": "Arm & leg sleeves (armbinders)",
+        "rating": null,
+        "id": 57
+      },
+      {
+        "name": "Harnesses (leather)",
+        "rating": null,
+        "id": 58
+      },
+      {
+        "name": "Harnesses (rope)",
+        "rating": null,
+        "id": 59
+      },
+      {
+        "name": "Cuffs (leather)",
+        "rating": null,
+        "id": 60
+      },
+      {
+        "name": "Cuffs (metal)",
+        "rating": null,
+        "id": 61
+      },
+      {
+        "name": "Manacles & Irons",
+        "rating": null,
+        "id": 62
+      },
+      {
+        "name": "Gags (cloth)",
+        "rating": null,
+        "id": 63
+      },
+      {
+        "name": "Gags (rubber)",
+        "rating": null,
+        "id": 64
+      },
+      {
+        "name": "Gags (tape)",
+        "rating": null,
+        "id": 65
+      },
+      {
+        "name": "Gags (phallic)",
+        "rating": null,
+        "id": 66
+      },
+      {
+        "name": "Gags (ring)",
+        "rating": null,
+        "id": 67
+      },
+      {
+        "name": "Gags (ball)",
+        "rating": null,
+        "id": 68
+      },
+      {
+        "name": "Mouth bits",
+        "rating": null,
+        "id": 69
+      },
+      {
+        "name": "Full head hoods",
+        "rating": null,
+        "id": 70
+      },
+      {
+        "name": "Mummification/saran wrapping",
+        "rating": null,
+        "id": 71
+      },
+      {
+        "name": "Straight jackets",
+        "rating": null,
+        "id": 72
+      },
+      {
+        "name": "Suspension (upright)",
+        "rating": null,
+        "id": 73
+      },
+      {
+        "name": "Suspension (horizontal)",
+        "rating": null,
+        "id": 74
+      },
+      {
+        "name": "Suspension (inverted)",
+        "rating": null,
+        "id": 75
+      }
+    ],
+    "Neutral": []
+  },
+  "Breath Play": {
+    "Giving": [
+      {
+        "name": "Asphyxiation",
+        "rating": null,
+        "id": 76
+      },
+      {
+        "name": "Breath control",
+        "rating": null,
+        "id": 77
+      },
+      {
+        "name": "Choking",
+        "rating": null,
+        "id": 78
+      },
+      {
+        "name": "Drowning",
+        "rating": null,
+        "id": 79
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Asphyxiation",
+        "rating": null,
+        "id": 80
+      },
+      {
+        "name": "Breath control",
+        "rating": null,
+        "id": 81
+      },
+      {
+        "name": "Choking",
+        "rating": null,
+        "id": 82
+      },
+      {
+        "name": "Drowning",
+        "rating": null,
+        "id": 83
+      }
+    ],
+    "Neutral": []
+  },
+  "General": {
+    "Giving": [
+      {
+        "name": "Dirty Talking",
+        "rating": null,
+        "id": 84
+      },
+      {
+        "name": "Fingers in mouth",
+        "rating": null,
+        "id": 85
+      },
+      {
+        "name": "Massages",
+        "rating": null,
+        "id": 86
+      },
+      {
+        "name": "Photos / videos",
+        "rating": null,
+        "id": 87
+      },
+      {
+        "name": "Teasing",
+        "rating": null,
+        "id": 88
+      },
+      {
+        "name": "Teasing",
+        "rating": null,
+        "id": 89
+      },
+      {
+        "name": "Humiliation (private)",
+        "rating": null,
+        "id": 90
+      },
+      {
+        "name": "Humiliation (public)",
+        "rating": null,
+        "id": 91
+      },
+      {
+        "name": "Verbal humiliation",
+        "rating": null,
+        "id": 92
+      },
+      {
+        "name": "Spitting",
+        "rating": null,
+        "id": 93
+      },
+      {
+        "name": "Washing mouth out with soap",
+        "rating": null,
+        "id": 94
+      },
+      {
+        "name": "Objectification (art, furniture...)",
+        "rating": null,
+        "id": 95
+      },
+      {
+        "name": "Spanking",
+        "rating": null,
+        "id": 96
+      },
+      {
+        "name": "Flogging",
+        "rating": null,
+        "id": 97
+      },
+      {
+        "name": "Single-tail whips",
+        "rating": null,
+        "id": 98
+      },
+      {
+        "name": "Canes",
+        "rating": null,
+        "id": 99
+      },
+      {
+        "name": "Belts",
+        "rating": null,
+        "id": 100
+      },
+      {
+        "name": "Leather straps",
+        "rating": null,
+        "id": 101
+      },
+      {
+        "name": "Riding crops",
+        "rating": null,
+        "id": 102
+      },
+      {
+        "name": "Hairbrushes",
+        "rating": null,
+        "id": 103
+      },
+      {
+        "name": "Paddles",
+        "rating": null,
+        "id": 104
+      },
+      {
+        "name": "Slapping (back, buttocks, breasts, genitals)",
+        "rating": null,
+        "id": 105
+      },
+      {
+        "name": "Strapping (full body beating)",
+        "rating": null,
+        "id": 106
+      },
+      {
+        "name": "Hair pulling",
+        "rating": null,
+        "id": 107
+      },
+      {
+        "name": "Face slapping",
+        "rating": null,
+        "id": 108
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Dirty Talking",
+        "rating": null,
+        "id": 109
+      },
+      {
+        "name": "Fingers in mouth",
+        "rating": null,
+        "id": 110
+      },
+      {
+        "name": "Massages",
+        "rating": null,
+        "id": 111
+      },
+      {
+        "name": "Photos / videos",
+        "rating": null,
+        "id": 112
+      },
+      {
+        "name": "Teasing",
+        "rating": null,
+        "id": 113
+      },
+      {
+        "name": "Humiliation (private)",
+        "rating": null,
+        "id": 114
+      },
+      {
+        "name": "Humiliation (public)",
+        "rating": null,
+        "id": 115
+      },
+      {
+        "name": "Verbal humiliation",
+        "rating": null,
+        "id": 116
+      },
+      {
+        "name": "Spitting",
+        "rating": null,
+        "id": 117
+      },
+      {
+        "name": "Washing mouth out with soap",
+        "rating": null,
+        "id": 118
+      },
+      {
+        "name": "Objectification (art, furniture...)",
+        "rating": null,
+        "id": 119
+      },
+      {
+        "name": "Spanking",
+        "rating": null,
+        "id": 120
+      },
+      {
+        "name": "Flogging",
+        "rating": null,
+        "id": 121
+      },
+      {
+        "name": "Single-tail whips",
+        "rating": null,
+        "id": 122
+      },
+      {
+        "name": "Canes",
+        "rating": null,
+        "id": 123
+      },
+      {
+        "name": "Belts",
+        "rating": null,
+        "id": 124
+      },
+      {
+        "name": "Leather straps",
+        "rating": null,
+        "id": 125
+      },
+      {
+        "name": "Riding crops",
+        "rating": null,
+        "id": 126
+      },
+      {
+        "name": "Hairbrushes",
+        "rating": null,
+        "id": 127
+      },
+      {
+        "name": "Paddles",
+        "rating": null,
+        "id": 128
+      },
+      {
+        "name": "Slapping (back, buttocks, breasts, genitals)",
+        "rating": null,
+        "id": 129
+      },
+      {
+        "name": "Strapping (full body beating)",
+        "rating": null,
+        "id": 130
+      },
+      {
+        "name": "Hair pulling",
+        "rating": null,
+        "id": 131
+      },
+      {
+        "name": "Face slapping",
+        "rating": null,
+        "id": 132
+      }
+    ],
+    "Neutral": [
+      {
+        "name": "Belly fucking",
+        "rating": null,
+        "id": 133
+      },
+      {
+        "name": "Contraceptives",
+        "rating": null,
+        "id": 134
+      },
+      {
+        "name": "Cuddles",
+        "rating": null,
+        "id": 135
+      },
+      {
+        "name": "Food Play",
+        "rating": null,
+        "id": 136
+      },
+      {
+        "name": "Kisses",
+        "rating": null,
+        "id": 137
+      },
+      {
+        "name": "Licking",
+        "rating": null,
+        "id": 138
+      },
+      {
+        "name": "Masturbation",
+        "rating": null,
+        "id": 139
+      },
+      {
+        "name": "Navel play",
+        "rating": null,
+        "id": 140
+      },
+      {
+        "name": "Romance / affection",
+        "rating": null,
+        "id": 141
+      },
+      {
+        "name": "Sex toys",
+        "rating": null,
+        "id": 142
+      },
+      {
+        "name": "Sexting /Chat etc",
+        "rating": null,
+        "id": 143
+      },
+      {
+        "name": "Sexting via phone or video call",
+        "rating": null,
+        "id": 144
+      },
+      {
+        "name": "Strip tease",
+        "rating": null,
+        "id": 145
+      },
+      {
+        "name": "Vanilla Sex",
+        "rating": null,
+        "id": 146
+      },
+      {
+        "name": "Voice Notes",
+        "rating": null,
+        "id": 147
+      },
+      {
+        "name": "Shaving (body hair)",
+        "rating": null,
+        "id": 148
+      },
+      {
+        "name": "Sexy clothing (private)",
+        "rating": null,
+        "id": 149
+      },
+      {
+        "name": "Sexy clothing (public)",
+        "rating": null,
+        "id": 150
+      },
+      {
+        "name": "Outdoor scenes",
+        "rating": null,
+        "id": 151
+      },
+      {
+        "name": "Public exposure",
+        "rating": null,
+        "id": 152
+      }
+    ]
+  },
+  "Psychological": {
+    "Giving": [
+      {
+        "name": "Primal/Prey",
+        "rating": null,
+        "id": 153
+      },
+      {
+        "name": "Conditioning",
+        "rating": null,
+        "id": 154
+      },
+      {
+        "name": "COC",
+        "rating": null,
+        "id": 155
+      },
+      {
+        "name": "Psycholagny (hands free, mentally stimulated orgasm).",
+        "rating": null,
+        "id": 156
+      },
+      {
+        "name": "Hypno Play",
+        "rating": null,
+        "id": 157
+      },
+      {
+        "name": "Praise",
+        "rating": null,
+        "id": 158
+      },
+      {
+        "name": "Degradation",
+        "rating": null,
+        "id": 159
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Primal/Prey",
+        "rating": null,
+        "id": 160
+      },
+      {
+        "name": "Conditioning",
+        "rating": null,
+        "id": 161
+      },
+      {
+        "name": "COC",
+        "rating": null,
+        "id": 162
+      },
+      {
+        "name": "Psycholagny (hands free, mentally stimulated orgasm).",
+        "rating": null,
+        "id": 163
+      },
+      {
+        "name": "Hypno Play",
+        "rating": null,
+        "id": 164
+      },
+      {
+        "name": "Praise",
+        "rating": null,
+        "id": 165
+      },
+      {
+        "name": "Degradation",
+        "rating": null,
+        "id": 166
+      }
+    ],
+    "Neutral": []
+  },
+  "Sexual Activity": {
+    "Giving": [
+      {
+        "name": "Fellatio/Cunnilingus",
+        "rating": null,
+        "id": 167
+      },
+      {
+        "name": "Swallowing semen(or getting it swallowed)",
+        "rating": null,
+        "id": 168
+      },
+      {
+        "name": "Cumming on Partner",
+        "rating": null,
+        "id": 169
+      },
+      {
+        "name": "Hand jobs",
+        "rating": null,
+        "id": 170
+      },
+      {
+        "name": "Anal sex",
+        "rating": null,
+        "id": 171
+      },
+      {
+        "name": "Anal plugs (small)",
+        "rating": null,
+        "id": 172
+      },
+      {
+        "name": "Anal plugs (large)",
+        "rating": null,
+        "id": 173
+      },
+      {
+        "name": "Anal plug (public, under clothes)",
+        "rating": null,
+        "id": 174
+      },
+      {
+        "name": "Anal beads",
+        "rating": null,
+        "id": 175
+      },
+      {
+        "name": "Vibrator on genitals",
+        "rating": null,
+        "id": 176
+      },
+      {
+        "name": "Fisting",
+        "rating": null,
+        "id": 177
+      },
+      {
+        "name": "Oral/anal play (rimming)",
+        "rating": null,
+        "id": 178
+      },
+      {
+        "name": "Double penetration (oral and vaginal)",
+        "rating": null,
+        "id": 179
+      },
+      {
+        "name": "Double penetration (oral and anal)",
+        "rating": null,
+        "id": 180
+      },
+      {
+        "name": "Double penetration (anal and vaginal)",
+        "rating": null,
+        "id": 181
+      },
+      {
+        "name": "Triple (oral and anal)",
+        "rating": null,
+        "id": 182
+      },
+      {
+        "name": "Forced masturbation",
+        "rating": null,
+        "id": 183
+      },
+      {
+        "name": "Orgasm control",
+        "rating": null,
+        "id": 184
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Fellatio/Cunnilingus",
+        "rating": null,
+        "id": 185
+      },
+      {
+        "name": "Swallowing semen(or getting it swallowed)",
+        "rating": null,
+        "id": 186
+      },
+      {
+        "name": "Cumming on Partner",
+        "rating": null,
+        "id": 187
+      },
+      {
+        "name": "Hand jobs",
+        "rating": null,
+        "id": 188
+      },
+      {
+        "name": "Anal sex",
+        "rating": null,
+        "id": 189
+      },
+      {
+        "name": "Anal plugs (small)",
+        "rating": null,
+        "id": 190
+      },
+      {
+        "name": "Anal plugs (large)",
+        "rating": null,
+        "id": 191
+      },
+      {
+        "name": "Anal plug (public, under clothes)",
+        "rating": null,
+        "id": 192
+      },
+      {
+        "name": "Anal beads",
+        "rating": null,
+        "id": 193
+      },
+      {
+        "name": "Vibrator on genitals",
+        "rating": null,
+        "id": 194
+      },
+      {
+        "name": "Fisting",
+        "rating": null,
+        "id": 195
+      },
+      {
+        "name": "Oral/anal play (rimming)",
+        "rating": null,
+        "id": 196
+      },
+      {
+        "name": "Double penetration (oral and vaginal)",
+        "rating": null,
+        "id": 197
+      },
+      {
+        "name": "Double penetration (oral and anal)",
+        "rating": null,
+        "id": 198
+      },
+      {
+        "name": "Double penetration (anal and vaginal)",
+        "rating": null,
+        "id": 199
+      },
+      {
+        "name": "Triple (oral and anal)",
+        "rating": null,
+        "id": 200
+      },
+      {
+        "name": "Forced masturbation",
+        "rating": null,
+        "id": 201
+      },
+      {
+        "name": "Orgasm control",
+        "rating": null,
+        "id": 202
+      }
+    ],
+    "Neutral": []
+  },
+  "Sensation Play": {
+    "Giving": [
+      {
+        "name": "Abrasion",
+        "rating": null,
+        "id": 203
+      },
+      {
+        "name": "Scratching",
+        "rating": null,
+        "id": 204
+      },
+      {
+        "name": "Biting",
+        "rating": null,
+        "id": 205
+      },
+      {
+        "name": "Tickling",
+        "rating": null,
+        "id": 206
+      },
+      {
+        "name": "Kissing",
+        "rating": null,
+        "id": 207
+      },
+      {
+        "name": "Zapping (e.g. elecric fly swatter)",
+        "rating": null,
+        "id": 208
+      },
+      {
+        "name": "Ice cubes",
+        "rating": null,
+        "id": 209
+      },
+      {
+        "name": "Wax Play",
+        "rating": null,
+        "id": 210
+      },
+      {
+        "name": "Fire",
+        "rating": null,
+        "id": 211
+      },
+      {
+        "name": "Clothespins",
+        "rating": null,
+        "id": 212
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Abrasion",
+        "rating": null,
+        "id": 213
+      },
+      {
+        "name": "Scratching",
+        "rating": null,
+        "id": 214
+      },
+      {
+        "name": "Biting",
+        "rating": null,
+        "id": 215
+      },
+      {
+        "name": "Tickling",
+        "rating": null,
+        "id": 216
+      },
+      {
+        "name": "Kissing",
+        "rating": null,
+        "id": 217
+      },
+      {
+        "name": "Zapping (e.g. elecric fly swatter)",
+        "rating": null,
+        "id": 218
+      },
+      {
+        "name": "Ice cubes",
+        "rating": null,
+        "id": 219
+      },
+      {
+        "name": "Wax Play",
+        "rating": null,
+        "id": 220
+      },
+      {
+        "name": "Fire",
+        "rating": null,
+        "id": 221
+      },
+      {
+        "name": "Clothespins",
+        "rating": null,
+        "id": 222
+      }
+    ],
+    "Neutral": []
+  },
+  "Other": {
+    "Giving": [
+      {
+        "name": "Feet",
+        "rating": null,
+        "id": 223
+      },
+      {
+        "name": "Boots",
+        "rating": null,
+        "id": 224
+      },
+      {
+        "name": "Underwear",
+        "rating": null,
+        "id": 225
+      },
+      {
+        "name": "Chastity devices",
+        "rating": null,
+        "id": 226
+      },
+      {
+        "name": "Masks",
+        "rating": null,
+        "id": 227
+      },
+      {
+        "name": "Breeding",
+        "rating": null,
+        "id": 228
+      },
+      {
+        "name": "Leather clothing",
+        "rating": null,
+        "id": 229
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Feet",
+        "rating": null,
+        "id": 230
+      },
+      {
+        "name": "Boots",
+        "rating": null,
+        "id": 231
+      },
+      {
+        "name": "Underwear",
+        "rating": null,
+        "id": 232
+      },
+      {
+        "name": "Chastity devices",
+        "rating": null,
+        "id": 233
+      },
+      {
+        "name": "Masks",
+        "rating": null,
+        "id": 234
+      },
+      {
+        "name": "Breeding",
+        "rating": null,
+        "id": 235
+      },
+      {
+        "name": "Leather clothing",
+        "rating": null,
+        "id": 236
+      }
+    ],
+    "Neutral": []
+  },
+  "Roleplaying": {
+    "Giving": [
+      {
+        "name": "Fear play",
+        "rating": null,
+        "id": 237
+      },
+      {
+        "name": "Fantasy abandonment",
+        "rating": null,
+        "id": 238
+      },
+      {
+        "name": "Kidnapping",
+        "rating": null,
+        "id": 239
+      },
+      {
+        "name": "Interrogation",
+        "rating": null,
+        "id": 240
+      },
+      {
+        "name": "Sleep deprivation",
+        "rating": null,
+        "id": 241
+      },
+      {
+        "name": "CNC",
+        "rating": null,
+        "id": 242
+      },
+      {
+        "name": "Gang bang",
+        "rating": null,
+        "id": 243
+      },
+      {
+        "name": "Initiation rites",
+        "rating": null,
+        "id": 244
+      },
+      {
+        "name": "Religious scenes",
+        "rating": null,
+        "id": 245
+      },
+      {
+        "name": "Medical scenes",
+        "rating": null,
+        "id": 246
+      },
+      {
+        "name": "Prison scenes",
+        "rating": null,
+        "id": 247
+      },
+      {
+        "name": "Primal/Prey",
+        "rating": null,
+        "id": 248
+      },
+      {
+        "name": "Schoolroom scenes",
+        "rating": null,
+        "id": 249
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Fear play",
+        "rating": null,
+        "id": 250
+      },
+      {
+        "name": "Fantasy abandonment",
+        "rating": null,
+        "id": 251
+      },
+      {
+        "name": "Kidnapping",
+        "rating": null,
+        "id": 252
+      },
+      {
+        "name": "Interrogation",
+        "rating": null,
+        "id": 253
+      },
+      {
+        "name": "Sleep deprivation",
+        "rating": null,
+        "id": 254
+      },
+      {
+        "name": "CNC",
+        "rating": null,
+        "id": 255
+      },
+      {
+        "name": "Gang bang",
+        "rating": null,
+        "id": 256
+      },
+      {
+        "name": "Initiation rites",
+        "rating": null,
+        "id": 257
+      },
+      {
+        "name": "Religious scenes",
+        "rating": null,
+        "id": 258
+      },
+      {
+        "name": "Medical scenes",
+        "rating": null,
+        "id": 259
+      },
+      {
+        "name": "Prison scenes",
+        "rating": null,
+        "id": 260
+      },
+      {
+        "name": "Primal/Prey",
+        "rating": null,
+        "id": 261
+      },
+      {
+        "name": "Schoolroom scenes",
+        "rating": null,
+        "id": 262
+      }
+    ],
+    "Neutral": []
+  },
+  "Service and Restrictive Behaviour": {
+    "Giving": [
+      {
+        "name": "(Following) orders",
+        "rating": null,
+        "id": 263
+      },
+      {
+        "name": "Forced servitude",
+        "rating": null,
+        "id": 264
+      },
+      {
+        "name": "Restrictive rules on behaviour",
+        "rating": null,
+        "id": 265
+      },
+      {
+        "name": "Eye contact restrictions",
+        "rating": null,
+        "id": 266
+      },
+      {
+        "name": "Speech restrictions (when, what, to whom)",
+        "rating": null,
+        "id": 267
+      },
+      {
+        "name": "Washroom restrictions",
+        "rating": null,
+        "id": 268
+      },
+      {
+        "name": "Punishments",
+        "rating": null,
+        "id": 269
+      },
+      {
+        "name": "Tasks",
+        "rating": null,
+        "id": 270
+      },
+      {
+        "name": "Massage",
+        "rating": null,
+        "id": 271
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "(Following) orders",
+        "rating": null,
+        "id": 272
+      },
+      {
+        "name": "Forced servitude",
+        "rating": null,
+        "id": 273
+      },
+      {
+        "name": "Restrictive rules on behaviour",
+        "rating": null,
+        "id": 274
+      },
+      {
+        "name": "Eye contact restrictions",
+        "rating": null,
+        "id": 275
+      },
+      {
+        "name": "Speech restrictions (when, what, to whom)",
+        "rating": null,
+        "id": 276
+      },
+      {
+        "name": "Washroom restrictions",
+        "rating": null,
+        "id": 277
+      },
+      {
+        "name": "Punishments",
+        "rating": null,
+        "id": 278
+      },
+      {
+        "name": "Tasks",
+        "rating": null,
+        "id": 279
+      },
+      {
+        "name": "Massage",
+        "rating": null,
+        "id": 280
+      }
+    ],
+    "Neutral": []
+  },
+  "Voyeurism/Exhibitionism": {
+    "Giving": [
+      {
+        "name": "Forced nudity (private)",
+        "rating": null,
+        "id": 281
+      },
+      {
+        "name": "Forced nudity (around others)",
+        "rating": null,
+        "id": 282
+      },
+      {
+        "name": "Exhibitionism (friends)",
+        "rating": null,
+        "id": 283
+      },
+      {
+        "name": "Exhibitionism (strangers)",
+        "rating": null,
+        "id": 284
+      },
+      {
+        "name": "Modelling for erotic photos",
+        "rating": null,
+        "id": 285
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Forced nudity (private)",
+        "rating": null,
+        "id": 286
+      },
+      {
+        "name": "Forced nudity (around others)",
+        "rating": null,
+        "id": 287
+      },
+      {
+        "name": "Exhibitionism (friends)",
+        "rating": null,
+        "id": 288
+      },
+      {
+        "name": "Exhibitionism (strangers)",
+        "rating": null,
+        "id": 289
+      },
+      {
+        "name": "Modelling for erotic photos",
+        "rating": null,
+        "id": 290
+      }
+    ],
+    "Neutral": []
   }
-  
+}

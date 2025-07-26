@@ -52,15 +52,51 @@
 
     let surveyA = null;
     let surveyB = null;
+    let surveyTemplate = null;
     let currentAction = 'Giving';
     let currentCategory = null;
+
+    function loadTemplate() {
+      return fetch('template-survey.json?v=62')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load template file.');
+          return response.json();
+        })
+        .then(data => {
+          surveyTemplate = data;
+        });
+    }
+
+    loadTemplate().catch(err => alert('Error loading template: ' + err.message));
+
+    function updateSurvey(survey) {
+      if (!surveyTemplate) return survey;
+      const updated = JSON.parse(JSON.stringify(surveyTemplate));
+      Object.keys(updated).forEach(category => {
+        ['Giving', 'Receiving', 'Neutral'].forEach(action => {
+          const templateList = updated[category][action] || [];
+          const loadedList =
+            (survey[category] && survey[category][action]) || [];
+          templateList.forEach(item => {
+            const match = loadedList.find(i => i.id === item.id);
+            item.rating = match && match.rating !== undefined ? match.rating : null;
+          });
+        });
+      });
+      return updated;
+    }
 
     document.getElementById('fileA').addEventListener('change', (e) => {
       const reader = new FileReader();
       reader.onload = (ev) => {
         try {
-          surveyA = JSON.parse(ev.target.result);
-          showCategories();
+          const parsed = JSON.parse(ev.target.result);
+          const apply = () => {
+            surveyA = updateSurvey(parsed);
+            showCategories();
+          };
+          if (surveyTemplate) apply();
+          else loadTemplate().then(apply).catch(() => alert('Failed to load template.'));
         } catch {
           alert('Invalid JSON file for Survey A.');
         }
@@ -69,23 +105,24 @@
     });
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
-      fetch('template-survey.json?v=61')
-        .then(response => {
-          if (!response.ok) throw new Error('Failed to load template file.');
-          return response.json();
-        })
-        .then(data => {
-          surveyA = data;
-          showCategories();
-        })
-        .catch(err => alert('Error loading template: ' + err.message));
+      const apply = () => {
+        surveyA = JSON.parse(JSON.stringify(surveyTemplate));
+        showCategories();
+      };
+      if (surveyTemplate) apply();
+      else loadTemplate().then(apply).catch(err => alert('Error loading template: ' + err.message));
     });
 
     document.getElementById('fileB').addEventListener('change', (e) => {
       const reader = new FileReader();
       reader.onload = (ev) => {
         try {
-          surveyB = JSON.parse(ev.target.result);
+          const parsed = JSON.parse(ev.target.result);
+          const apply = () => {
+            surveyB = updateSurvey(parsed);
+          };
+          if (surveyTemplate) apply();
+          else loadTemplate().then(apply).catch(() => alert('Failed to load template.'));
         } catch {
           alert('Invalid JSON file for Survey B.');
         }
@@ -201,9 +238,7 @@
           ] || [];
 
           listA.forEach(itemA => {
-            const match = listB.find(itemB =>
-              itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase()
-            );
+            const match = listB.find(itemB => itemA.id === itemB.id);
             if (match) {
               const ratingA = parseInt(itemA.rating);
               const ratingB = parseInt(match.rating);
@@ -243,9 +278,7 @@
           const listA = surveyA[category][action] || [];
           const listB = surveyB[category][action] || [];
           listA.forEach(itemA => {
-            const match = listB.find(itemB =>
-              itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase()
-            );
+            const match = listB.find(itemB => itemA.id === itemB.id);
             if (match) {
               const ratingA = parseInt(itemA.rating);
               const ratingB = parseInt(match.rating);
