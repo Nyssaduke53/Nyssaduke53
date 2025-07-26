@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <img id="outerWildsBanner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Outer Wilds Banner" class="theme-banner" />
-  <img id="monsterPromBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish_banner.png" alt="Monster Prom Banner" class="theme-banner" />
+  <img id="indigoBanner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Indigo Banner" class="theme-banner" />
+  <img id="pinkBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish_banner.png" alt="Pink Banner" class="theme-banner" />
 
   <h1>Kink Compatibility Survey</h1>
 
@@ -18,9 +18,12 @@
         <option value="dark-mode">Dark</option>
         <option value="light-mode">Light</option>
         <option value="theme-blue">Blue</option>
-        <option value="theme-outer-wilds">Outer Wilds</option>
-        <option value="theme-monster-prom">Monster Prom 4</option>
+        <option value="theme-indigo">Indigo</option>
+        <option value="theme-pink">Pink</option>
         <option value="theme-rainbow">Rainbow</option>
+        <option value="theme-green">Green</option>
+        <option value="theme-red">Red</option>
+        <option value="theme-orange">Orange</option>
       </select>
     </div>
 
@@ -52,15 +55,51 @@
 
     let surveyA = null;
     let surveyB = null;
+    let surveyTemplate = null;
     let currentAction = 'Giving';
     let currentCategory = null;
+
+    function loadTemplate() {
+      return fetch('template-survey.json?v=62')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load template file.');
+          return response.json();
+        })
+        .then(data => {
+          surveyTemplate = data;
+        });
+    }
+
+    loadTemplate().catch(err => alert('Error loading template: ' + err.message));
+
+    function updateSurvey(survey) {
+      if (!surveyTemplate) return survey;
+      const updated = JSON.parse(JSON.stringify(surveyTemplate));
+      Object.keys(updated).forEach(category => {
+        ['Giving', 'Receiving', 'Neutral'].forEach(action => {
+          const templateList = updated[category][action] || [];
+          const loadedList =
+            (survey[category] && survey[category][action]) || [];
+          templateList.forEach(item => {
+            const match = loadedList.find(i => i.id === item.id);
+            item.rating = match && match.rating !== undefined ? match.rating : null;
+          });
+        });
+      });
+      return updated;
+    }
 
     document.getElementById('fileA').addEventListener('change', (e) => {
       const reader = new FileReader();
       reader.onload = (ev) => {
         try {
-          surveyA = JSON.parse(ev.target.result);
-          showCategories();
+          const parsed = JSON.parse(ev.target.result);
+          const apply = () => {
+            surveyA = updateSurvey(parsed);
+            showCategories();
+          };
+          if (surveyTemplate) apply();
+          else loadTemplate().then(apply).catch(() => alert('Failed to load template.'));
         } catch {
           alert('Invalid JSON file for Survey A.');
         }
@@ -69,23 +108,24 @@
     });
 
     document.getElementById('newSurveyBtn').addEventListener('click', () => {
-      fetch('template-survey.json?v=61')
-        .then(response => {
-          if (!response.ok) throw new Error('Failed to load template file.');
-          return response.json();
-        })
-        .then(data => {
-          surveyA = data;
-          showCategories();
-        })
-        .catch(err => alert('Error loading template: ' + err.message));
+      const apply = () => {
+        surveyA = JSON.parse(JSON.stringify(surveyTemplate));
+        showCategories();
+      };
+      if (surveyTemplate) apply();
+      else loadTemplate().then(apply).catch(err => alert('Error loading template: ' + err.message));
     });
 
     document.getElementById('fileB').addEventListener('change', (e) => {
       const reader = new FileReader();
       reader.onload = (ev) => {
         try {
-          surveyB = JSON.parse(ev.target.result);
+          const parsed = JSON.parse(ev.target.result);
+          const apply = () => {
+            surveyB = updateSurvey(parsed);
+          };
+          if (surveyTemplate) apply();
+          else loadTemplate().then(apply).catch(() => alert('Failed to load template.'));
         } catch {
           alert('Invalid JSON file for Survey B.');
         }
@@ -201,9 +241,7 @@
           ] || [];
 
           listA.forEach(itemA => {
-            const match = listB.find(itemB =>
-              itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase()
-            );
+            const match = listB.find(itemB => itemA.id === itemB.id);
             if (match) {
               const ratingA = parseInt(itemA.rating);
               const ratingB = parseInt(match.rating);
@@ -243,9 +281,7 @@
           const listA = surveyA[category][action] || [];
           const listB = surveyB[category][action] || [];
           listA.forEach(itemA => {
-            const match = listB.find(itemB =>
-              itemB.name.trim().toLowerCase() === itemA.name.trim().toLowerCase()
-            );
+            const match = listB.find(itemB => itemA.id === itemB.id);
             if (match) {
               const ratingA = parseInt(itemA.rating);
               const ratingB = parseInt(match.rating);
@@ -279,22 +315,22 @@
 
     const themeSelector = document.getElementById('themeSelector');
     const savedTheme = localStorage.getItem('selectedTheme');
-    const outerWildsBanner = document.getElementById('outerWildsBanner');
-    const monsterPromBanner = document.getElementById('monsterPromBanner');
+    const indigoBanner = document.getElementById('indigoBanner');
+    const pinkBanner = document.getElementById('pinkBanner');
 
     if (savedTheme) {
       document.body.className = savedTheme;
       themeSelector.value = savedTheme;
-      outerWildsBanner.style.display = savedTheme === 'theme-outer-wilds' ? 'block' : 'none';
-      monsterPromBanner.style.display = savedTheme === 'theme-monster-prom' ? 'block' : 'none';
+      indigoBanner.style.display = savedTheme === 'theme-indigo' ? 'block' : 'none';
+      pinkBanner.style.display = savedTheme === 'theme-pink' ? 'block' : 'none';
     }
 
     themeSelector.addEventListener('change', () => {
       const selectedTheme = themeSelector.value;
       document.body.className = selectedTheme;
       localStorage.setItem('selectedTheme', selectedTheme);
-      outerWildsBanner.style.display = selectedTheme === 'theme-outer-wilds' ? 'block' : 'none';
-      monsterPromBanner.style.display = selectedTheme === 'theme-monster-prom' ? 'block' : 'none';
+      indigoBanner.style.display = selectedTheme === 'theme-indigo' ? 'block' : 'none';
+      pinkBanner.style.display = selectedTheme === 'theme-pink' ? 'block' : 'none';
     });
 
     switchTab('Giving');
