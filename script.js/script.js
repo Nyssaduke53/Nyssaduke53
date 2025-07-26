@@ -1,9 +1,8 @@
-java
 // Theme switching logic
 const themeSelector = document.getElementById('themeSelector');
 const savedTheme = localStorage.getItem('selectedTheme');
-const outerWildsBanner = document.getElementById('outerWildsBanner');
-const monsterPromBanner = document.getElementById('monsterPromBanner');
+const indigoBanner = document.getElementById('indigoBanner');
+const pinkBanner = document.getElementById('pinkBanner');
 
 if (savedTheme) {
   document.body.className = savedTheme;
@@ -19,11 +18,11 @@ themeSelector.addEventListener('change', () => {
 });
 
 function updateBannerVisibility(theme) {
-  if (outerWildsBanner) {
-    outerWildsBanner.style.display = theme === 'theme-outer-wilds' ? 'block' : 'none';
+  if (indigoBanner) {
+    indigoBanner.style.display = theme === 'theme-indigo' ? 'block' : 'none';
   }
-  if (monsterPromBanner) {
-    monsterPromBanner.style.display = theme === 'theme-monster-prom' ? 'block' : 'none';
+  if (pinkBanner) {
+    pinkBanner.style.display = theme === 'theme-pink' ? 'block' : 'none';
   }
 }
 

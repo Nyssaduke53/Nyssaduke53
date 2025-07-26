@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <img id="outerWildsBanner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Outer Wilds Banner" class="theme-banner" />
-  <img id="monsterPromBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish_banner.png" alt="Monster Prom Banner" class="theme-banner" />
+  <img id="indigoBanner" src="https://static.displate.com/380x270/displate/2023-10-13/48fa0ba6447050543f77cc734d746bd6_e644163f144c50f83cbef9fe6e223464.jpg" alt="Indigo Banner" class="theme-banner" />
+  <img id="pinkBanner" src="https://freeimghost.net/images/2025/06/20/yourethemaindish_banner.png" alt="Pink Banner" class="theme-banner" />
 
   <h1>Kink Compatibility Survey</h1>
 
@@ -18,9 +18,12 @@
         <option value="dark-mode">Dark</option>
         <option value="light-mode">Light</option>
         <option value="theme-blue">Blue</option>
-        <option value="theme-outer-wilds">Outer Wilds</option>
-        <option value="theme-monster-prom">Monster Prom 4</option>
+        <option value="theme-indigo">Indigo</option>
+        <option value="theme-pink">Pink</option>
         <option value="theme-rainbow">Rainbow</option>
+        <option value="theme-green">Green</option>
+        <option value="theme-red">Red</option>
+        <option value="theme-orange">Orange</option>
       </select>
     </div>
 
@@ -312,22 +315,22 @@
 
     const themeSelector = document.getElementById('themeSelector');
     const savedTheme = localStorage.getItem('selectedTheme');
-    const outerWildsBanner = document.getElementById('outerWildsBanner');
-    const monsterPromBanner = document.getElementById('monsterPromBanner');
+    const indigoBanner = document.getElementById('indigoBanner');
+    const pinkBanner = document.getElementById('pinkBanner');
 
     if (savedTheme) {
       document.body.className = savedTheme;
       themeSelector.value = savedTheme;
-      outerWildsBanner.style.display = savedTheme === 'theme-outer-wilds' ? 'block' : 'none';
-      monsterPromBanner.style.display = savedTheme === 'theme-monster-prom' ? 'block' : 'none';
+      indigoBanner.style.display = savedTheme === 'theme-indigo' ? 'block' : 'none';
+      pinkBanner.style.display = savedTheme === 'theme-pink' ? 'block' : 'none';
     }
 
     themeSelector.addEventListener('change', () => {
       const selectedTheme = themeSelector.value;
       document.body.className = selectedTheme;
       localStorage.setItem('selectedTheme', selectedTheme);
-      outerWildsBanner.style.display = selectedTheme === 'theme-outer-wilds' ? 'block' : 'none';
-      monsterPromBanner.style.display = selectedTheme === 'theme-monster-prom' ? 'block' : 'none';
+      indigoBanner.style.display = selectedTheme === 'theme-indigo' ? 'block' : 'none';
+      pinkBanner.style.display = selectedTheme === 'theme-pink' ? 'block' : 'none';
     });
 
     switchTab('Giving');
