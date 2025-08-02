@@ -254,6 +254,7 @@ input[type="file"] {
   bottom: 0;
   width: 260px;
   background-color: #f0f0f0;
+  color: #000;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   overflow-y: auto;
@@ -272,7 +273,7 @@ input[type="file"] {
   border: none;
   font-size: 20px;
   cursor: pointer;
-  color: inherit;
+  color: #000;
 }
 
 #sidebar .tab-container {
