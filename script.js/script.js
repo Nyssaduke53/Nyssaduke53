@@ -3,6 +3,8 @@ const categoryContainer = document.getElementById('categoryContainer');
 const kinkList = document.getElementById('kinkList');
 const sidebar = document.getElementById('sidebar');
 const closeSidebarBtn = document.getElementById('closeSidebar');
+const kinkDrawer = document.getElementById('kinkDrawer');
+const closeKinkDrawerBtn = document.getElementById('closeKinkDrawer');
 
 let surveyA = null;
 let surveyB = null;
@@ -88,6 +90,7 @@ document.getElementById('fileB').addEventListener('change', (e) => {
 function showCategories() {
   categoryContainer.innerHTML = '';
   if (!surveyA) return;
+  if (kinkDrawer) kinkDrawer.classList.remove('open');
   const categories = Object.keys(surveyA);
   categories.forEach(cat => {
     const btn = document.createElement('button');
@@ -110,6 +113,7 @@ function showKinks(category) {
   const kinks = surveyA[category][currentAction];
   if (!kinks || kinks.length === 0) {
     kinkList.textContent = 'No items here.';
+    if (kinkDrawer) kinkDrawer.classList.add('open');
     return;
   }
 
@@ -140,6 +144,7 @@ function showKinks(category) {
     container.appendChild(select);
     kinkList.appendChild(container);
   });
+  if (kinkDrawer) kinkDrawer.classList.add('open');
 }
 
 // Tab switching
@@ -296,6 +301,13 @@ document.getElementById('themeSelector').addEventListener('change', () => {
 if (closeSidebarBtn) {
   closeSidebarBtn.addEventListener('click', () => {
     sidebar.classList.remove('open');
+    if (kinkDrawer) kinkDrawer.classList.remove('open');
+  });
+}
+
+if (closeKinkDrawerBtn) {
+  closeKinkDrawerBtn.addEventListener('click', () => {
+    kinkDrawer.classList.remove('open');
   });
 }
 
