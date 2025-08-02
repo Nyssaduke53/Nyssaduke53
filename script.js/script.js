@@ -1,6 +1,8 @@
 // Main survey logic
 const categoryContainer = document.getElementById('categoryContainer');
 const kinkList = document.getElementById('kinkList');
+const sidebar = document.getElementById('sidebar');
+const closeSidebarBtn = document.getElementById('closeSidebar');
 
 let surveyA = null;
 let surveyB = null;
@@ -60,6 +62,7 @@ document.getElementById('newSurveyBtn').addEventListener('click', () => {
   const apply = () => {
     surveyA = JSON.parse(JSON.stringify(surveyTemplate));
     showCategories();
+    if (sidebar) sidebar.classList.add('open');
   };
   if (surveyTemplate) apply();
   else loadTemplate().then(apply).catch(err => alert('Error loading template: ' + err.message));
@@ -289,6 +292,12 @@ document.getElementById('themeSelector').addEventListener('change', () => {
   document.body.className = selectedTheme;
   updateBannerVisibility(selectedTheme);
 });
+
+if (closeSidebarBtn) {
+  closeSidebarBtn.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+  });
+}
 
 // Initialize default view
 switchTab('Giving');
