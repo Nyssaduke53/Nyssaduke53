@@ -1,0 +1,23 @@
+/* RESET & TOKENS */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  /* typography */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --step-0: 0.875rem;
+  --step-1: 1rem;
+  --step-2: 1.25rem;
+  /* spacing 8‑pt scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 150ms;
+}
+body {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--fg);
+}
+.visually-hidden { position: absolute; inset: 0 auto auto 0; width: 1px; height: 1px; overflow: hidden; }

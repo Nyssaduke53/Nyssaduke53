@@ -1,0 +1,14 @@
+/* Each theme overrides CSS vars defined in :root */
+.theme-dark {
+  --bg: #0d0d0d;
+  --fg: #f5f5f5;
+  --primary: #8b5cf6; /* indigo */
+  --surface: #1a1a1a;
+}
+.theme-light {
+  --bg: #ffffff;
+  --fg: #1c1c1c;
+  --primary: #2563eb; /* blue */
+  --surface: #f3f4f6;
+}
+/* Additional themes (pink, teal…) can extend the same way */
