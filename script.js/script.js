@@ -265,8 +265,7 @@ document.getElementById('compareBtn').onclick = () => {
   resultDiv.innerHTML = output;
 };
 
-// Theme switching
-const savedTheme = localStorage.getItem('selectedTheme');
+// Theme switching without persistent storage
 function updateBannerVisibility(theme) {
   const indigoBanner = document.getElementById('indigoBanner');
   const pinkBanner = document.getElementById('pinkBanner');
@@ -278,16 +277,16 @@ function updateBannerVisibility(theme) {
   }
 }
 
-if (savedTheme) {
-  document.body.className = savedTheme;
-  document.getElementById('themeSelector').value = savedTheme;
-  updateBannerVisibility(savedTheme);
-}
+// Apply the selected theme on load based on the current selector value
+document.addEventListener('DOMContentLoaded', () => {
+  const initialTheme = document.getElementById('themeSelector').value;
+  document.body.className = initialTheme;
+  updateBannerVisibility(initialTheme);
+});
 
 document.getElementById('themeSelector').addEventListener('change', () => {
   const selectedTheme = document.getElementById('themeSelector').value;
   document.body.className = selectedTheme;
-  localStorage.setItem('selectedTheme', selectedTheme);
   updateBannerVisibility(selectedTheme);
 });
 
