@@ -29,6 +29,21 @@
         "name": "Cum",
         "rating": null,
         "id": 5
+      },
+      {
+        "name": "Sweat",
+        "rating": null,
+        "id": 291
+      },
+      {
+        "name": "Vomit",
+        "rating": null,
+        "id": 292
+      },
+      {
+        "name": "Tears/Crying",
+        "rating": null,
+        "id": 293
       }
     ]
   },
@@ -58,6 +73,31 @@
         "name": "Clit clips/weights/suction",
         "rating": null,
         "id": 10
+      },
+      {
+        "name": "Hair pulling",
+        "rating": null,
+        "id": 294
+      },
+      {
+        "name": "Face slapping",
+        "rating": null,
+        "id": 295
+      },
+      {
+        "name": "Butt slapping",
+        "rating": null,
+        "id": 296
+      },
+      {
+        "name": "Breast slapping",
+        "rating": null,
+        "id": 297
+      },
+      {
+        "name": "Genital slapping",
+        "rating": null,
+        "id": 298
       }
     ],
     "Receiving": [
@@ -85,6 +125,31 @@
         "name": "Clit clips/weights/suction",
         "rating": null,
         "id": 15
+      },
+      {
+        "name": "Hair pulling",
+        "rating": null,
+        "id": 299
+      },
+      {
+        "name": "Face slapping",
+        "rating": null,
+        "id": 300
+      },
+      {
+        "name": "Butt slapping",
+        "rating": null,
+        "id": 301
+      },
+      {
+        "name": "Breast slapping",
+        "rating": null,
+        "id": 302
+      },
+      {
+        "name": "Genital slapping",
+        "rating": null,
+        "id": 303
       }
     ],
     "Neutral": []
@@ -417,6 +482,21 @@
         "name": "Drowning",
         "rating": null,
         "id": 79
+      },
+      {
+        "name": "Smothering",
+        "rating": null,
+        "id": 304
+      },
+      {
+        "name": "Forced self-breath-control",
+        "rating": null,
+        "id": 305
+      },
+      {
+        "name": "Gas mask",
+        "rating": null,
+        "id": 306
       }
     ],
     "Receiving": [
@@ -439,6 +519,21 @@
         "name": "Drowning",
         "rating": null,
         "id": 83
+      },
+      {
+        "name": "Smothering",
+        "rating": null,
+        "id": 307
+      },
+      {
+        "name": "Forced self-breath-control",
+        "rating": null,
+        "id": 308
+      },
+      {
+        "name": "Gas mask",
+        "rating": null,
+        "id": 309
       }
     ],
     "Neutral": []
@@ -799,7 +894,7 @@
   "Psychological": {
     "Giving": [
       {
-        "name": "Primal/Prey",
+        "name": "Psychological primal/prey",
         "rating": null,
         "id": 153
       },
@@ -807,11 +902,6 @@
         "name": "Conditioning",
         "rating": null,
         "id": 154
-      },
-      {
-        "name": "COC",
-        "rating": null,
-        "id": 155
       },
       {
         "name": "Psycholagny (hands free, mentally stimulated orgasm).",
@@ -832,11 +922,46 @@
         "name": "Degradation",
         "rating": null,
         "id": 159
+      },
+      {
+        "name": "Traditional primal/prey",
+        "rating": null,
+        "id": 310
+      },
+      {
+        "name": "Fear play",
+        "rating": null,
+        "id": 312
+      },
+      {
+        "name": "Objectification",
+        "rating": null,
+        "id": 314
+      },
+      {
+        "name": "Gaslighting",
+        "rating": null,
+        "id": 316
+      },
+      {
+        "name": "Role erosion(identity play/ loss of self)",
+        "rating": null,
+        "id": 318
+      },
+      {
+        "name": "Jealousy play",
+        "rating": null,
+        "id": 320
+      },
+      {
+        "name": "Manipulation",
+        "rating": null,
+        "id": 322
       }
     ],
     "Receiving": [
       {
-        "name": "Primal/Prey",
+        "name": "Psychological primal/prey",
         "rating": null,
         "id": 160
       },
@@ -844,11 +969,6 @@
         "name": "Conditioning",
         "rating": null,
         "id": 161
-      },
-      {
-        "name": "COC",
-        "rating": null,
-        "id": 162
       },
       {
         "name": "Psycholagny (hands free, mentally stimulated orgasm).",
@@ -869,6 +989,41 @@
         "name": "Degradation",
         "rating": null,
         "id": 166
+      },
+      {
+        "name": "Traditional primal/prey",
+        "rating": null,
+        "id": 311
+      },
+      {
+        "name": "Fear play",
+        "rating": null,
+        "id": 313
+      },
+      {
+        "name": "Objectification",
+        "rating": null,
+        "id": 315
+      },
+      {
+        "name": "Gaslighting",
+        "rating": null,
+        "id": 317
+      },
+      {
+        "name": "Role erosion(identity play/ loss of self)",
+        "rating": null,
+        "id": 319
+      },
+      {
+        "name": "Jealousy play",
+        "rating": null,
+        "id": 321
+      },
+      {
+        "name": "Manipulation",
+        "rating": null,
+        "id": 323
       }
     ],
     "Neutral": []
@@ -911,11 +1066,6 @@
         "id": 173
       },
       {
-        "name": "Anal plug (public, under clothes)",
-        "rating": null,
-        "id": 174
-      },
-      {
         "name": "Anal beads",
         "rating": null,
         "id": 175
@@ -954,16 +1104,6 @@
         "name": "Triple (oral and anal)",
         "rating": null,
         "id": 182
-      },
-      {
-        "name": "Forced masturbation",
-        "rating": null,
-        "id": 183
-      },
-      {
-        "name": "Orgasm control",
-        "rating": null,
-        "id": 184
       }
     ],
     "Receiving": [
@@ -1001,11 +1141,6 @@
         "name": "Anal plugs (large)",
         "rating": null,
         "id": 191
-      },
-      {
-        "name": "Anal plug (public, under clothes)",
-        "rating": null,
-        "id": 192
       },
       {
         "name": "Anal beads",
@@ -1046,16 +1181,6 @@
         "name": "Triple (oral and anal)",
         "rating": null,
         "id": 200
-      },
-      {
-        "name": "Forced masturbation",
-        "rating": null,
-        "id": 201
-      },
-      {
-        "name": "Orgasm control",
-        "rating": null,
-        "id": 202
       }
     ],
     "Neutral": []
@@ -1111,6 +1236,26 @@
         "name": "Clothespins",
         "rating": null,
         "id": 212
+      },
+      {
+        "name": "Needles",
+        "rating": null,
+        "id": 324
+      },
+      {
+        "name": "Sensory deprivation",
+        "rating": null,
+        "id": 325
+      },
+      {
+        "name": "Physical overpowering",
+        "rating": null,
+        "id": 326
+      },
+      {
+        "name": "Manhandling",
+        "rating": null,
+        "id": 327
       }
     ],
     "Receiving": [
@@ -1163,6 +1308,26 @@
         "name": "Clothespins",
         "rating": null,
         "id": 222
+      },
+      {
+        "name": "Needles",
+        "rating": null,
+        "id": 328
+      },
+      {
+        "name": "Sensory deprivation",
+        "rating": null,
+        "id": 329
+      },
+      {
+        "name": "Physical overpowering",
+        "rating": null,
+        "id": 330
+      },
+      {
+        "name": "Manhandling",
+        "rating": null,
+        "id": 331
       }
     ],
     "Neutral": []
@@ -1183,11 +1348,6 @@
         "name": "Underwear",
         "rating": null,
         "id": 225
-      },
-      {
-        "name": "Chastity devices",
-        "rating": null,
-        "id": 226
       },
       {
         "name": "Masks",
@@ -1222,11 +1382,6 @@
         "id": 232
       },
       {
-        "name": "Chastity devices",
-        "rating": null,
-        "id": 233
-      },
-      {
         "name": "Masks",
         "rating": null,
         "id": 234
@@ -1246,11 +1401,6 @@
   },
   "Roleplaying": {
     "Giving": [
-      {
-        "name": "Fear play",
-        "rating": null,
-        "id": 237
-      },
       {
         "name": "Fantasy abandonment",
         "rating": null,
@@ -1310,14 +1460,24 @@
         "name": "Schoolroom scenes",
         "rating": null,
         "id": 249
+      },
+      {
+        "name": "Incest",
+        "rating": null,
+        "id": 350
+      },
+      {
+        "name": "Fantasy species",
+        "rating": null,
+        "id": 351
+      },
+      {
+        "name": "Mind control",
+        "rating": null,
+        "id": 352
       }
     ],
     "Receiving": [
-      {
-        "name": "Fear play",
-        "rating": null,
-        "id": 250
-      },
       {
         "name": "Fantasy abandonment",
         "rating": null,
@@ -1377,6 +1537,21 @@
         "name": "Schoolroom scenes",
         "rating": null,
         "id": 262
+      },
+      {
+        "name": "Incest",
+        "rating": null,
+        "id": 353
+      },
+      {
+        "name": "Fantasy species",
+        "rating": null,
+        "id": 354
+      },
+      {
+        "name": "Mind control",
+        "rating": null,
+        "id": 355
       }
     ],
     "Neutral": []
@@ -1427,6 +1602,116 @@
         "name": "Massage",
         "rating": null,
         "id": 271
+      },
+      {
+        "name": "Domestic tasks",
+        "rating": null,
+        "id": 356
+      },
+      {
+        "name": "Serving food and drink",
+        "rating": null,
+        "id": 357
+      },
+      {
+        "name": "Personal care rituals",
+        "rating": null,
+        "id": 358
+      },
+      {
+        "name": "Being on-call at specified times",
+        "rating": null,
+        "id": 359
+      },
+      {
+        "name": "Daily task assignments",
+        "rating": null,
+        "id": 360
+      },
+      {
+        "name": "Corrections for imperfection",
+        "rating": null,
+        "id": 361
+      },
+      {
+        "name": "Uniforms/dress codes",
+        "rating": null,
+        "id": 362
+      },
+      {
+        "name": "Kneeling/posture presentation",
+        "rating": null,
+        "id": 363
+      },
+      {
+        "name": "Silent service",
+        "rating": null,
+        "id": 364
+      },
+      {
+        "name": "Public service(at parties or events)",
+        "rating": null,
+        "id": 365
+      },
+      {
+        "name": "Erotic service (pleasure on command, without seeking your own)",
+        "rating": null,
+        "id": 366
+      },
+      {
+        "name": "Protocol and ritual",
+        "rating": null,
+        "id": 394
+      },
+      {
+        "name": "Formal language",
+        "rating": null,
+        "id": 395
+      },
+      {
+        "name": "Greeting and departure rituals(kneeling, verbal scripts, gestures)",
+        "rating": null,
+        "id": 396
+      },
+      {
+        "name": "Requiring permission for things(speech, movement, attire)",
+        "rating": null,
+        "id": 397
+      },
+      {
+        "name": "Daily rituals (morning checkins, status reports, mantra repetitions)",
+        "rating": null,
+        "id": 398
+      },
+      {
+        "name": "Specific postures for rest, attention, punishment, waiting",
+        "rating": null,
+        "id": 399
+      },
+      {
+        "name": "Restricted behavior(no eye contact, silence, no questions)",
+        "rating": null,
+        "id": 400
+      },
+      {
+        "name": "Ritual object use(collar, cuffs, leash, tokens)",
+        "rating": null,
+        "id": 401
+      },
+      {
+        "name": "Tracking obedience(journals, apps)",
+        "rating": null,
+        "id": 402
+      },
+      {
+        "name": "Formalized rules for misbehavior and correction",
+        "rating": null,
+        "id": 403
+      },
+      {
+        "name": "Ritualized aftercare or scene closure",
+        "rating": null,
+        "id": 404
       }
     ],
     "Receiving": [
@@ -1474,6 +1759,213 @@
         "name": "Massage",
         "rating": null,
         "id": 280
+      },
+      {
+        "name": "Domestic tasks",
+        "rating": null,
+        "id": 367
+      },
+      {
+        "name": "Serving food and drink",
+        "rating": null,
+        "id": 368
+      },
+      {
+        "name": "Personal care rituals",
+        "rating": null,
+        "id": 369
+      },
+      {
+        "name": "Being on-call at specified times",
+        "rating": null,
+        "id": 370
+      },
+      {
+        "name": "Daily task assignments",
+        "rating": null,
+        "id": 371
+      },
+      {
+        "name": "Corrections for imperfection",
+        "rating": null,
+        "id": 372
+      },
+      {
+        "name": "Uniforms/dress codes",
+        "rating": null,
+        "id": 373
+      },
+      {
+        "name": "Kneeling/posture presentation",
+        "rating": null,
+        "id": 374
+      },
+      {
+        "name": "Silent service",
+        "rating": null,
+        "id": 375
+      },
+      {
+        "name": "Public service(at parties or events)",
+        "rating": null,
+        "id": 376
+      },
+      {
+        "name": "Erotic service (pleasure on command, without seeking your own)",
+        "rating": null,
+        "id": 377
+      },
+      {
+        "name": "Protocol and ritual",
+        "rating": null,
+        "id": 405
+      },
+      {
+        "name": "Formal language",
+        "rating": null,
+        "id": 406
+      },
+      {
+        "name": "Greeting and departure rituals(kneeling, verbal scripts, gestures)",
+        "rating": null,
+        "id": 407
+      },
+      {
+        "name": "Requiring permission for things(speech, movement, attire)",
+        "rating": null,
+        "id": 408
+      },
+      {
+        "name": "Daily rituals (morning checkins, status reports, mantra repetitions)",
+        "rating": null,
+        "id": 409
+      },
+      {
+        "name": "Specific postures for rest, attention, punishment, waiting",
+        "rating": null,
+        "id": 410
+      },
+      {
+        "name": "Restricted behavior(no eye contact, silence, no questions)",
+        "rating": null,
+        "id": 411
+      },
+      {
+        "name": "Ritual object use(collar, cuffs, leash, tokens)",
+        "rating": null,
+        "id": 412
+      },
+      {
+        "name": "Tracking obedience(journals, apps)",
+        "rating": null,
+        "id": 413
+      },
+      {
+        "name": "Formalized rules for misbehavior and correction",
+        "rating": null,
+        "id": 414
+      },
+      {
+        "name": "Ritualized aftercare or scene closure",
+        "rating": null,
+        "id": 415
+      }
+    ],
+  "Neutral": []
+  },
+  "Bratting and Taming": {
+    "Giving": [
+      {
+        "name": "Teasing/mischief",
+        "rating": null,
+        "id": 416
+      },
+      {
+        "name": "Bratting for attention",
+        "rating": null,
+        "id": 417
+      },
+      {
+        "name": "Bratting for punishment",
+        "rating": null,
+        "id": 418
+      },
+      {
+        "name": "Bratting as a test of dominance",
+        "rating": null,
+        "id": 419
+      },
+      {
+        "name": "\"Make me\" energy",
+        "rating": null,
+        "id": 420
+      },
+      {
+        "name": "Clever defiance/rule bending",
+        "rating": null,
+        "id": 421
+      },
+      {
+        "name": "Being \"broken in\" to temporary obedience",
+        "rating": null,
+        "id": 422
+      },
+      {
+        "name": "Enabling/encouraging bratting",
+        "rating": null,
+        "id": 423
+      },
+      {
+        "name": "Power struggles as foreplay",
+        "rating": null,
+        "id": 424
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Teasing/mischief",
+        "rating": null,
+        "id": 425
+      },
+      {
+        "name": "Bratting for attention",
+        "rating": null,
+        "id": 426
+      },
+      {
+        "name": "Bratting for punishment",
+        "rating": null,
+        "id": 427
+      },
+      {
+        "name": "Bratting as a test of dominance",
+        "rating": null,
+        "id": 428
+      },
+      {
+        "name": "\"Make me\" energy",
+        "rating": null,
+        "id": 429
+      },
+      {
+        "name": "Clever defiance/rule bending",
+        "rating": null,
+        "id": 430
+      },
+      {
+        "name": "Being \"broken in\" to temporary obedience",
+        "rating": null,
+        "id": 431
+      },
+      {
+        "name": "Enabling/encouraging bratting",
+        "rating": null,
+        "id": 432
+      },
+      {
+        "name": "Power struggles as foreplay",
+        "rating": null,
+        "id": 433
       }
     ],
     "Neutral": []
@@ -1504,6 +1996,11 @@
         "name": "Modelling for erotic photos",
         "rating": null,
         "id": 285
+      },
+      {
+        "name": "Toys under clothes in public",
+        "rating": null,
+        "id": 392
       }
     ],
     "Receiving": [
@@ -1531,6 +2028,225 @@
         "name": "Modelling for erotic photos",
         "rating": null,
         "id": 290
+      },
+      {
+        "name": "Toys under clothes in public",
+        "rating": null,
+        "id": 393
+      }
+    ],
+    "Neutral": []
+  },
+  "Body Part/Fetish Play": {
+    "Giving": [
+      {
+        "name": "Feet/foot worship",
+        "rating": null,
+        "id": 332
+      },
+      {
+        "name": "Hands",
+        "rating": null,
+        "id": 333
+      },
+      {
+        "name": "Hair",
+        "rating": null,
+        "id": 334
+      },
+      {
+        "name": "Thighs",
+        "rating": null,
+        "id": 335
+      },
+      {
+        "name": "Neck",
+        "rating": null,
+        "id": 336
+      },
+      {
+        "name": "Ears",
+        "rating": null,
+        "id": 337
+      },
+      {
+        "name": "Belly",
+        "rating": null,
+        "id": 338
+      },
+      {
+        "name": "Voice fetish",
+        "rating": null,
+        "id": 339
+      },
+      {
+        "name": "Nails/make up fetish",
+        "rating": null,
+        "id": 340
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Feet/foot worship",
+        "rating": null,
+        "id": 341
+      },
+      {
+        "name": "Hands",
+        "rating": null,
+        "id": 342
+      },
+      {
+        "name": "Hair",
+        "rating": null,
+        "id": 343
+      },
+      {
+        "name": "Thighs",
+        "rating": null,
+        "id": 344
+      },
+      {
+        "name": "Neck",
+        "rating": null,
+        "id": 345
+      },
+      {
+        "name": "Ears",
+        "rating": null,
+        "id": 346
+      },
+      {
+        "name": "Belly",
+        "rating": null,
+        "id": 347
+      },
+      {
+        "name": "Voice fetish",
+        "rating": null,
+        "id": 348
+      },
+      {
+        "name": "Nails/make up fetish",
+        "rating": null,
+        "id": 349
+      }
+    ],
+    "Neutral": []
+  },
+  "Orgasm Control & Sexual Manipulation": {
+    "Giving": [
+      {
+        "name": "Edging",
+        "rating": null,
+        "id": 378
+      },
+      {
+        "name": "Short term denial",
+        "rating": null,
+        "id": 379
+      },
+      {
+        "name": "Long term denial",
+        "rating": null,
+        "id": 380
+      },
+      {
+        "name": "Forced orgasms/overstimulation",
+        "rating": null,
+        "id": 381
+      },
+      {
+        "name": "Ruined orgasms",
+        "rating": null,
+        "id": 382
+      },
+      {
+        "name": "No touch periods",
+        "rating": null,
+        "id": 383
+      },
+      {
+        "name": "Milking",
+        "rating": null,
+        "id": 384
+      },
+      {
+        "name": "COC",
+        "rating": null,
+        "id": 155
+      },
+      {
+        "name": "Forced masturbation",
+        "rating": null,
+        "id": 183
+      },
+      {
+        "name": "Orgasm control",
+        "rating": null,
+        "id": 184
+      },
+      {
+        "name": "Chastity devices",
+        "rating": null,
+        "id": 226
+      }
+    ],
+    "Receiving": [
+      {
+        "name": "Edging",
+        "rating": null,
+        "id": 385
+      },
+      {
+        "name": "Short term denial",
+        "rating": null,
+        "id": 386
+      },
+      {
+        "name": "Long term denial",
+        "rating": null,
+        "id": 387
+      },
+      {
+        "name": "Forced orgasms/overstimulation",
+        "rating": null,
+        "id": 388
+      },
+      {
+        "name": "Ruined orgasms",
+        "rating": null,
+        "id": 389
+      },
+      {
+        "name": "No touch periods",
+        "rating": null,
+        "id": 390
+      },
+      {
+        "name": "Milking",
+        "rating": null,
+        "id": 391
+      },
+      {
+        "name": "COC",
+        "rating": null,
+        "id": 162
+      },
+      {
+        "name": "Forced masturbation",
+        "rating": null,
+        "id": 201
+      },
+      {
+        "name": "Orgasm control",
+        "rating": null,
+        "id": 202
+      },
+      {
+        "name": "Chastity devices",
+        "rating": null,
+        "id": 233
       }
     ],
     "Neutral": []
