@@ -218,14 +218,25 @@ input[type="file"] {
   margin: 0;
   padding: 6px 14px;
   border-radius: 4px;
-  border: 1px solid #aaa;
-  background-color: #eee;
+  border: 1px solid #666;
+  background-color: #ddd;
+  color: #000;
   cursor: pointer;
 }
 #categoryContainer button.active {
   background-color: #007acc;
   color: #fff;
   border-color: #005fa3;
+}
+
+/* Subcategory Rating Dropdowns */
+#kinkList select {
+  margin-left: 8px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  color: #000;
 }
 
 /* Result Section */
